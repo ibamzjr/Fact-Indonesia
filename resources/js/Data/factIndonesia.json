@@ -1,0 +1,16 @@
+{
+    "name": "FACT Indonesia",
+    "fullName": "Focus Area Collaborative Team Indonesia",
+    "website": "https://fact-indonesia.com/",
+    "profileUrl": "https://fact-indonesia.com/profile/",
+    "motto": "Creativity Beyond Knowledge",
+    "referenceCheckedOn": "2026-09-28",
+    "implementationStatus": "reference-content-not-yet-connected-to-the-inherited-interface",
+    "services": [
+        { "id": "pre-retirement", "title": "Pre Retirement Training" },
+        { "id": "entrepreneurship", "title": "Pelatihan Kewirausahaan dan Pendampingan Usaha" },
+        { "id": "csr-research", "title": "CSR & Layanan Riset" },
+        { "id": "event-organizer", "title": "Event Organizer" },
+        { "id": "outplacement", "title": "Outplacement & Capacity Building" }
+    ]
+}
