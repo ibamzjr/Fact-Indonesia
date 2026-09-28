@@ -1,0 +1,29 @@
+# Operating system and editor files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Local notes and generated previews
+*.tmp
+*.log
+.cache/
+
+# Never publish implementation or runtime material here
+.env*
+*.sql
+storage/
+vendor/
+node_modules/
+public/build/
+public/hot
+public/storage/
+
+# Private application and local publication material
+.vercel/
+*.sqlite
+*.sqlite3
+auth.json
+*.pem
+*.key
+coverage/
