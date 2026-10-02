@@ -2,16 +2,20 @@ import React from "react";
 import reference from "../../Data/factIndonesia.json";
 import records from "../../Data/factPrograms.json";
 import { createOrganizationProfile } from "../../fact/organization";
-import { createProgramCatalogue } from "../../fact/programs";
+import { createProgramCatalogue, findProgram } from "../../fact/programs";
+import { programHref } from "../../fact/navigation";
+import useFactProgramSelection from "../../hooks/useFactProgramSelection";
 import FactNavigation from "../../Components/Fact/FactNavigation";
 import OrganizationProfile from "../../Components/Fact/OrganizationProfile";
 import ProgramCatalogue from "../../Components/Fact/ProgramCatalogue";
+import ProgramDetail from "../../Components/Fact/ProgramDetail";
 import portfolioImage from "../../../../assets/fact-indonesia-hero.png";
 
 const organization = createOrganizationProfile(reference);
 const catalogue = createProgramCatalogue(records);
 
 export default function FactPreview() {
+    const { selectedId, selectProgram, closeProgram } = useFactProgramSelection();
     return (
         <div className="fact-preview">
             <a className="fact-skip-link" href="#fact-main">Ke konten utama</a>
@@ -26,11 +30,12 @@ export default function FactPreview() {
                         <span className="fact-status">Portfolio</span>
                     </div>
                     <p className="fact-intro">Temukan layanan untuk pengembangan diri, usaha, dan organisasi.</p>
-                    <ProgramCatalogue records={catalogue} />
+                    <ProgramCatalogue records={catalogue} onSelect={selectProgram} getProgramHref={(program) => programHref(program.id)} />
                 </section>
                 <OrganizationProfile organization={organization} image={portfolioImage} />
             </main>
             <footer className="fact-footer"><div className="fact-container"><span>{organization.name}</span><span>{organization.motto}</span></div></footer>
+            <ProgramDetail requestedId={selectedId} program={findProgram(catalogue, selectedId)} organization={organization} onClose={closeProgram} />
         </div>
     );
 }
