@@ -5,6 +5,7 @@ import { createOrganizationProfile } from "../../fact/organization";
 import { createProgramCatalogue } from "../../fact/programs";
 import FactNavigation from "../../Components/Fact/FactNavigation";
 import OrganizationProfile from "../../Components/Fact/OrganizationProfile";
+import ProgramCatalogue from "../../Components/Fact/ProgramCatalogue";
 import portfolioImage from "../../../../assets/fact-indonesia-hero.png";
 
 const organization = createOrganizationProfile(reference);
@@ -25,9 +26,7 @@ export default function FactPreview() {
                         <span className="fact-status">Portfolio</span>
                     </div>
                     <p className="fact-intro">Temukan layanan untuk pengembangan diri, usaha, dan organisasi.</p>
-                    <ul className="fact-service-list">
-                        {catalogue.map((program) => <li key={program.id}><h2>{program.title}</h2><p>{program.summary}</p></li>)}
-                    </ul>
+                    <ProgramCatalogue records={catalogue} />
                 </section>
                 <OrganizationProfile organization={organization} image={portfolioImage} />
             </main>
