@@ -1,6 +1,8 @@
 import React from "react";
 import reference from "../../Data/factIndonesia.json";
 import records from "../../Data/factPrograms.json";
+import faqRecords from "../../Data/factFaq.json";
+import { createFaq } from "../../fact/faq";
 import { createOrganizationProfile } from "../../fact/organization";
 import { createProgramCatalogue, findProgram } from "../../fact/programs";
 import { programHref } from "../../fact/navigation";
@@ -9,10 +11,12 @@ import FactNavigation from "../../Components/Fact/FactNavigation";
 import OrganizationProfile from "../../Components/Fact/OrganizationProfile";
 import ProgramCatalogue from "../../Components/Fact/ProgramCatalogue";
 import ProgramDetail from "../../Components/Fact/ProgramDetail";
+import FactFaq from "../../Components/Fact/FactFaq";
 import portfolioImage from "../../../../assets/fact-indonesia-hero.png";
 
 const organization = createOrganizationProfile(reference);
 const catalogue = createProgramCatalogue(records);
+const faq = createFaq(faqRecords);
 
 export default function FactPreview() {
     const { selectedId, selectProgram, closeProgram } = useFactProgramSelection();
@@ -33,6 +37,7 @@ export default function FactPreview() {
                     <ProgramCatalogue records={catalogue} onSelect={selectProgram} getProgramHref={(program) => programHref(program.id)} />
                 </section>
                 <OrganizationProfile organization={organization} image={portfolioImage} />
+                <FactFaq items={faq} />
             </main>
             <footer className="fact-footer"><div className="fact-container"><span>{organization.name}</span><span>{organization.motto}</span></div></footer>
             <ProgramDetail requestedId={selectedId} program={findProgram(catalogue, selectedId)} organization={organization} onClose={closeProgram} />

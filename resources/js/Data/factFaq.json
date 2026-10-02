@@ -1,0 +1,30 @@
+[
+    {
+        "id": "organization",
+        "question": "Apa fokus FACT Indonesia?",
+        "answer": "FACT Indonesia bergerak dalam pelatihan dan konsultansi untuk pengembangan sumber daya manusia, kreativitas, dan kinerja organisasi.",
+        "kind": "reference-summary",
+        "sourceUrl": "https://fact-indonesia.com/profile/"
+    },
+    {
+        "id": "services",
+        "question": "Layanan apa yang tersedia dalam katalog?",
+        "answer": "Katalog merangkum layanan persiapan pensiun, kewirausahaan dan pendampingan usaha, CSR dan riset, event organizer, serta outplacement dan capacity building.",
+        "kind": "reference-summary",
+        "sourceUrl": "https://fact-indonesia.com/"
+    },
+    {
+        "id": "availability",
+        "question": "Bagaimana mengetahui jadwal dan biaya?",
+        "answer": "Konfirmasikan jadwal, biaya, dan ketersediaan langsung kepada FACT Indonesia melalui situs resminya.",
+        "kind": "portfolio-policy",
+        "sourceUrl": "https://fact-indonesia.com/"
+    },
+    {
+        "id": "registration",
+        "question": "Apakah portfolio ini menerima pendaftaran atau pembayaran?",
+        "answer": "Tidak. Portfolio ini tidak menerima data peserta atau transaksi. Informasi pendaftaran perlu dikonfirmasi melalui kanal resmi FACT Indonesia.",
+        "kind": "portfolio-policy",
+        "sourceUrl": "https://fact-indonesia.com/"
+    }
+]

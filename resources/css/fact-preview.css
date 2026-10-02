@@ -67,6 +67,13 @@ body { margin: 0; }
 .fact-about figure { margin: 0; }
 .fact-about img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: contain; }
 .fact-about figcaption { margin-top: 8px; font-size: 12px; color: var(--fact-muted); }
+.fact-faq { display: grid; grid-template-columns: 1fr 2fr; gap: 64px; padding-block: 64px; }
+.fact-faq-list details { border-top: 1px solid var(--fact-line); padding-block: 20px; }
+.fact-faq-list details:last-child { border-bottom: 1px solid var(--fact-line); }
+.fact-faq-list summary { display: flex; align-items: center; justify-content: space-between; gap: 24px; min-height: 44px; list-style: none; font-weight: 700; cursor: pointer; }
+.fact-faq-list summary::-webkit-details-marker { display: none; }
+.fact-faq-list details[open] summary svg { transform: rotate(45deg); }
+.fact-faq-list p { color: var(--fact-muted); margin-top: 12px; padding-right: 44px; }
 .fact-footer { padding-block: 28px; background: #153832; color: #fff; font-size: 13px; }
 .fact-footer .fact-container { display: flex; justify-content: space-between; gap: 20px; }
 @media (max-width: 640px) {
@@ -85,5 +92,6 @@ body { margin: 0; }
     .fact-detail { padding: 24px; }
     .fact-about { padding-block: 40px; }
     .fact-about-grid { grid-template-columns: 1fr; gap: 32px; }
+    .fact-faq { grid-template-columns: 1fr; gap: 28px; padding-block: 40px; }
     .fact-footer .fact-container { flex-direction: column; gap: 4px; }
 }
