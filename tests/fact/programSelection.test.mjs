@@ -9,5 +9,5 @@ test("program selection preserves the current path and unrelated query data", ()
 });
 
 test("unsafe detail destinations cannot be created", () => {
-    for (const id of ["../../payments", "javascript:alert(1)", "CSR", ""]) assert.throws(() => selectionUrl("https://example.com/", id), TypeError);
+    for (const id of [undefined, 123, {}, "../../payments", "javascript:alert(1)", "CSR", ""]) assert.throws(() => selectionUrl("https://example.com/", id), TypeError);
 });

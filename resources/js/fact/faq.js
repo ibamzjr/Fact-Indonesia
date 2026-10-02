@@ -4,7 +4,7 @@ export function createFaq(records) {
     if (!Array.isArray(records)) throw new TypeError("FAQ must be an array.");
     const ids = new Set();
     return Object.freeze(records.map((record) => {
-        if (!record || !/^[a-z]+(?:-[a-z]+)*$/.test(record.id) || ids.has(record.id)) {
+        if (!record || typeof record.id !== "string" || !/^[a-z]+(?:-[a-z]+)*$/.test(record.id) || ids.has(record.id)) {
             throw new TypeError("FAQ IDs must be unique slugs.");
         }
         if (![record.question, record.answer].every((value) => typeof value === "string" && value.trim())) {

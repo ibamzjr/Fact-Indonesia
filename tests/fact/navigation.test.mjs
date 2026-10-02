@@ -14,5 +14,5 @@ test("program links preserve a readable, safe and shareable selection", () => {
     assert.equal(programHref("csr-research"), "?layanan=csr-research#katalog");
     assert.equal(selectedProgramId("?layanan=csr-research&other=value"), "csr-research");
     assert.equal(selectedProgramId(""), null);
-    for (const id of ["../foo", "foo bar", "<script>", ""]) assert.throws(() => programHref(id), TypeError);
+    for (const id of [undefined, null, 123, {}, "../foo", "foo bar", "<script>", ""]) assert.throws(() => programHref(id), TypeError);
 });

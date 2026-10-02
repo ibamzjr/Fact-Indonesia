@@ -1,0 +1,20 @@
+[
+    {
+        "file": "fact-indonesia-hero.png",
+        "originalFile": "Hero.png",
+        "bytes": 3309820,
+        "sha256": "1531cb5ba2f23b0c843a6998f67f5c70335c8383c577ba7ccb597ca372b82a92"
+    },
+    {
+        "file": "fact-indonesia-catalogue.png",
+        "originalFile": "Kiri.png",
+        "bytes": 10300623,
+        "sha256": "7342fa91d9c2562fb05496c1f666b50709da7f1f3202b3e8f98e76209803b124"
+    },
+    {
+        "file": "fact-indonesia-recovery.png",
+        "originalFile": "Kanan.png",
+        "bytes": 10120174,
+        "sha256": "be32d922f9481bb5d7967682d6a244d0c90128a9019915c4d712e3e25e8cf8c2"
+    }
+]

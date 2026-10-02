@@ -14,7 +14,7 @@ test("FACT FAQ separates business references from portfolio policy", () => {
 });
 
 test("FAQ rejects missing content, duplicate IDs, unsafe links and invented source types", () => {
-    for (const invalid of [null, [null], [records[0], records[0]], [{ ...records[0], answer: " " }],
+    for (const invalid of [null, [null], [records[0], records[0]], [{ ...records[0], id: undefined }], [{ ...records[0], id: 123 }], [{ ...records[0], answer: " " }],
         [{ ...records[0], sourceUrl: "https://example.com/" }], [{ ...records[0], kind: "official-quote" }]]) {
         assert.throws(() => createFaq(invalid), TypeError);
     }

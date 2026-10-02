@@ -6,7 +6,7 @@ export const factNavigation = Object.freeze([
 ]);
 
 export function programHref(id) {
-    if (!/^[a-z]+(?:-[a-z]+)*$/.test(id)) throw new TypeError("Invalid program slug.");
+    if (typeof id !== "string" || !/^[a-z]+(?:-[a-z]+)*$/.test(id)) throw new TypeError("Invalid program slug.");
     return `?layanan=${encodeURIComponent(id)}#katalog`;
 }
 
