@@ -12,6 +12,7 @@ import OrganizationProfile from "../../Components/Fact/OrganizationProfile";
 import ProgramCatalogue from "../../Components/Fact/ProgramCatalogue";
 import ProgramDetail from "../../Components/Fact/ProgramDetail";
 import FactFaq from "../../Components/Fact/FactFaq";
+import FactContact from "../../Components/Fact/FactContact";
 import portfolioImage from "../../../../assets/fact-indonesia-hero.png";
 
 const organization = createOrganizationProfile(reference);
@@ -38,6 +39,7 @@ export default function FactPreview() {
                 </section>
                 <OrganizationProfile organization={organization} image={portfolioImage} />
                 <FactFaq items={faq} />
+                <FactContact organization={organization} />
             </main>
             <footer className="fact-footer"><div className="fact-container"><span>{organization.name}</span><span>{organization.motto}</span></div></footer>
             <ProgramDetail requestedId={selectedId} program={findProgram(catalogue, selectedId)} organization={organization} onClose={closeProgram} />

@@ -74,12 +74,20 @@ body { margin: 0; }
 .fact-faq-list summary::-webkit-details-marker { display: none; }
 .fact-faq-list details[open] summary svg { transform: rotate(45deg); }
 .fact-faq-list p { color: var(--fact-muted); margin-top: 12px; padding-right: 44px; }
+.fact-contact { background: #16191a; color: #fff; padding-block: 48px; }
+.fact-contact-inner { display: flex; align-items: center; justify-content: space-between; gap: 64px; }
+.fact-contact .fact-eyebrow { color: #e7b828; }
+.fact-contact p:not(.fact-eyebrow) { margin-top: 16px; color: #c9d1cd; max-width: 560px; }
+.fact-contact-actions { display: flex; flex-direction: column; align-items: start; gap: 20px; flex: 0 0 auto; }
+.fact-contact .fact-action { color: #16191a; }
 .fact-footer { padding-block: 28px; background: #153832; color: #fff; font-size: 13px; }
 .fact-footer .fact-container { display: flex; justify-content: space-between; gap: 20px; }
+@media (max-width: 840px) {
+    .fact-header-inner { flex-wrap: wrap; gap: 18px; padding-block: 20px; }
+    .fact-header nav { order: 3; width: 100%; gap: 20px; }
+}
 @media (max-width: 640px) {
     .fact-container { width: calc(100% - 32px); }
-    .fact-header-inner { flex-wrap: wrap; gap: 18px; padding-block: 20px; }
-    .fact-header nav { order: 3; width: 100%; gap: 24px; }
     .fact-official-link { font-size: 12px; padding-inline: 10px; }
     .fact-preview h1 { font-size: 28px; }
     .fact-preview h2 { font-size: 24px; }
@@ -93,5 +101,6 @@ body { margin: 0; }
     .fact-about { padding-block: 40px; }
     .fact-about-grid { grid-template-columns: 1fr; gap: 32px; }
     .fact-faq { grid-template-columns: 1fr; gap: 28px; padding-block: 40px; }
+    .fact-contact-inner { flex-direction: column; align-items: start; gap: 28px; }
     .fact-footer .fact-container { flex-direction: column; gap: 4px; }
 }

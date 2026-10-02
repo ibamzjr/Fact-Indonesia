@@ -1,5 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { ExternalLinkIcon, XIcon } from "@heroicons/react/outline";
+import { contactActions } from "../../fact/contact";
+import OfficialLink from "./OfficialLink";
 
 export default function ProgramDetail({ requestedId, program, organization, onClose }) {
     const dialog = useRef(null);
@@ -30,7 +32,7 @@ export default function ProgramDetail({ requestedId, program, organization, onCl
                         <div><dt>Ketersediaan</dt><dd>Konfirmasi langsung dengan FACT Indonesia</dd></div>
                         <div><dt>Jadwal & biaya</dt><dd>Informasi terbaru tersedia melalui tim FACT</dd></div>
                     </dl>
-                    <a className="fact-action" href={organization.website} target="_blank" rel="noopener noreferrer">Hubungi FACT <ExternalLinkIcon aria-hidden="true" /></a>
+                    <OfficialLink action={contactActions(organization)[0]} className="fact-action" />
                     <a className="fact-text-link fact-detail-source" href={program.sourceUrl} target="_blank" rel="noopener noreferrer">Referensi layanan resmi <ExternalLinkIcon aria-hidden="true" /></a>
                 </>
             ) : (
