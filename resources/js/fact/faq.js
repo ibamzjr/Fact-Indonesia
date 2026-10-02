@@ -1,3 +1,5 @@
+import { officialReferenceUrl } from "./sources.js";
+
 export function createFaq(records) {
     if (!Array.isArray(records)) throw new TypeError("FAQ must be an array.");
     const ids = new Set();
@@ -9,8 +11,7 @@ export function createFaq(records) {
             throw new TypeError("FAQ questions and answers are required.");
         }
         if (!["reference-summary", "portfolio-policy"].includes(record.kind)) throw new TypeError("Unknown FAQ source kind.");
-        const source = new URL(record.sourceUrl);
-        if (source.origin !== "https://fact-indonesia.com" || source.username || source.password) throw new TypeError("Invalid FAQ reference.");
+        officialReferenceUrl(record.sourceUrl);
         ids.add(record.id);
         return Object.freeze({ ...record });
     }));

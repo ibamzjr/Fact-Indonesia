@@ -3,6 +3,7 @@ import reference from "../../Data/factIndonesia.json";
 import records from "../../Data/factPrograms.json";
 import faqRecords from "../../Data/factFaq.json";
 import { createFaq } from "../../fact/faq";
+import { validateContentProvenance } from "../../fact/sources";
 import { createOrganizationProfile } from "../../fact/organization";
 import { createProgramCatalogue, findProgram } from "../../fact/programs";
 import { programHref } from "../../fact/navigation";
@@ -18,6 +19,7 @@ import portfolioImage from "../../../../assets/fact-indonesia-hero.png";
 const organization = createOrganizationProfile(reference);
 const catalogue = createProgramCatalogue(records);
 const faq = createFaq(faqRecords);
+validateContentProvenance(reference, catalogue, faq);
 
 export default function FactPreview() {
     const { selectedId, selectProgram, closeProgram } = useFactProgramSelection();

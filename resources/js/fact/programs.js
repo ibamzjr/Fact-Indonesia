@@ -1,3 +1,5 @@
+import { officialReferenceUrl } from "./sources.js";
+
 export const programCategories = Object.freeze(["Pelatihan", "Konsultansi", "Kegiatan"]);
 
 const fields = ["id", "title", "category", "summary", "availability", "sourceUrl"];
@@ -24,10 +26,7 @@ export function validateProgramCatalogue(records) {
         if (!programCategories.includes(record.category) || record.availability !== "contact-required") {
             throw new TypeError("Unsupported category or availability.");
         }
-        const source = new URL(record.sourceUrl);
-        if (source.origin !== "https://fact-indonesia.com" || source.username || source.password) {
-            throw new TypeError("Programs must reference the official FACT website over HTTPS.");
-        }
+        officialReferenceUrl(record.sourceUrl);
         ids.add(record.id);
     });
 

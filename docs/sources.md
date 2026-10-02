@@ -1,6 +1,7 @@
 # Content References
 
-Reference review date: 28 September 2026.
+Initial reference review: 28 September 2026. Service taxonomy and profile
+rechecked on 2 October 2026 for the standalone FACT preview.
 
 | Reference | Use |
 | --- | --- |
@@ -15,3 +16,9 @@ are deliberately not copied as permanent project data.
 
 Portfolio mockups supplied by the repository owner are documented separately
 in the [visual gallery](gallery.md).
+
+The second review used the indexed homepage overview after direct homepage
+requests timed out; the profile page was accessible. The local source registry
+records this distinction. Categories used for filtering and portfolio policy
+answers are editorial, not additional official service or enrollment claims.
+See the [content contract](product/content-contract.md).
