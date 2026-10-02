@@ -27,3 +27,4 @@ auth.json
 *.pem
 *.key
 coverage/
+dist-fact/

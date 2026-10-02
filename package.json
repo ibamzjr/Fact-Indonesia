@@ -5,7 +5,9 @@
     "scripts": {
         "build": "vite build",
         "dev": "vite",
-        "test": "node --test tests/fact/*.test.mjs"
+        "test": "node --test tests/fact/*.test.mjs",
+        "dev:fact": "vite --config vite.fact.config.js --host 127.0.0.1",
+        "build:fact": "vite build --config vite.fact.config.js"
     },
     "devDependencies": {
         "@headlessui/react": "^2.0.0",

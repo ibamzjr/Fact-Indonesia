@@ -1,0 +1,56 @@
+:root { color-scheme: light; }
+body { margin: 0; }
+.fact-preview { --fact-ink: #16191a; --fact-muted: #52635d; --fact-accent: #e7b828; --fact-line: #dce3df; color: var(--fact-ink); background: #fff; font-family: Arial, sans-serif; font-size: 16px; line-height: 1.55; }
+.fact-preview *, .fact-preview *::before, .fact-preview *::after { box-sizing: border-box; }
+.fact-preview a { color: inherit; text-decoration: none; }
+.fact-preview button, .fact-preview input, .fact-preview select { font: inherit; }
+.fact-preview h1, .fact-preview h2, .fact-preview h3, .fact-preview p { margin: 0; }
+.fact-preview h1 { font-size: 40px; line-height: 1.15; }
+.fact-preview h2 { font-size: 28px; line-height: 1.2; }
+.fact-preview svg { width: 20px; height: 20px; flex: 0 0 auto; }
+.fact-preview :focus-visible { outline: 3px solid #17644d; outline-offset: 4px; }
+.fact-container { width: min(100% - 64px, 1120px); margin-inline: auto; }
+.fact-skip-link { position: fixed; top: 12px; left: 12px; z-index: 20; background: #fff; padding: 12px; transform: translateY(-160%); }
+.fact-skip-link:focus { transform: translateY(0); }
+.fact-header { border-bottom: 1px solid var(--fact-line); }
+.fact-header-inner { display: flex; align-items: center; justify-content: space-between; gap: 24px; min-height: 94px; }
+.fact-brand { display: flex; align-items: center; gap: 10px; font-size: 25px; font-weight: 700; line-height: 1; }
+.fact-brand-mark { display: grid; place-items: center; width: 38px; height: 42px; background: var(--fact-accent); font-size: 30px; }
+.fact-brand-subtitle { display: block; margin-top: 4px; font-size: 12px; font-weight: 400; }
+.fact-header nav { display: flex; gap: 28px; font-size: 14px; }
+.fact-header nav a:hover { text-decoration: underline; text-underline-offset: 5px; }
+.fact-official-link, .fact-text-link { display: inline-flex; align-items: center; gap: 10px; font-size: 14px; font-weight: 700; }
+.fact-official-link { min-height: 44px; padding: 0 16px; border: 1px solid var(--fact-line); border-radius: 4px; }
+.fact-official-link:hover { background: #f3f6f4; }
+.fact-catalogue { padding-block: 56px 72px; }
+.fact-section-heading { display: flex; justify-content: space-between; align-items: end; gap: 24px; }
+.fact-eyebrow { margin-bottom: 12px !important; color: var(--fact-muted); font-size: 13px; font-weight: 700; }
+.fact-status { color: #153832; font-size: 12px; font-weight: 700; border: 1px solid var(--fact-line); border-radius: 3px; padding: 4px 10px; }
+.fact-intro { margin-top: 18px !important; color: var(--fact-muted); }
+.fact-service-list { padding: 0; list-style: none; margin: 32px 0 0; }
+.fact-service-list li { border-top: 1px solid var(--fact-line); padding-block: 20px; }
+.fact-service-list h2 { font-size: 20px; margin-bottom: 8px; }
+.fact-about { background: #f3f6f4; padding-block: 64px; }
+.fact-about-grid { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 64px; }
+.fact-about p:not(.fact-eyebrow) { margin-top: 18px; }
+.fact-about .fact-text-link { margin-top: 24px; }
+.fact-muted { color: var(--fact-muted); }
+.fact-about figure { margin: 0; }
+.fact-about img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: contain; }
+.fact-about figcaption { margin-top: 8px; font-size: 12px; color: var(--fact-muted); }
+.fact-footer { padding-block: 28px; background: #153832; color: #fff; font-size: 13px; }
+.fact-footer .fact-container { display: flex; justify-content: space-between; gap: 20px; }
+@media (max-width: 640px) {
+    .fact-container { width: calc(100% - 32px); }
+    .fact-header-inner { flex-wrap: wrap; gap: 18px; padding-block: 20px; }
+    .fact-header nav { order: 3; width: 100%; gap: 24px; }
+    .fact-official-link { font-size: 12px; padding-inline: 10px; }
+    .fact-preview h1 { font-size: 28px; }
+    .fact-preview h2 { font-size: 24px; }
+    .fact-catalogue { padding-block: 36px 48px; }
+    .fact-section-heading { align-items: start; }
+    .fact-status { display: none; }
+    .fact-about { padding-block: 40px; }
+    .fact-about-grid { grid-template-columns: 1fr; gap: 32px; }
+    .fact-footer .fact-container { flex-direction: column; gap: 4px; }
+}
