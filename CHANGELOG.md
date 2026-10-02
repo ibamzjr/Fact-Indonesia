@@ -1,5 +1,17 @@
 # Changelog
 
+## 2026-10-02 To 2026-10-03
+
+- Added a standalone FACT service-information preview without private Laravel.
+- Connected organization references, searchable service discovery, and detail.
+- Added browser-history recovery, native FAQ, and official contact actions.
+- Established separate FACT contracts, reviewed sources, and policy boundaries.
+- Added publication, import-graph, asset-integrity, and frontend build CI checks.
+- Updated run instructions and case study to reflect implemented features only.
+
+Second-batch commits use their real creation dates across midnight in Jakarta.
+The original RoyalVilla source and owner-supplied PNG exports are unchanged.
+
 ## 2026-09-28
 
 - Established an independent Fact-Indonesia repository.

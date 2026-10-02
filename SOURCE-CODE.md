@@ -10,7 +10,9 @@ foundation imported from [RoyalVilla](https://github.com/ibamzjr/RoyalVilla).
 - Public interface imagery, icons, fonts, and Vite/Tailwind configuration.
 - Sanitized Laravel models, validation, catalogue, moderation, and test examples
   under `backend`.
-- FACT reference content in `resources/js/Data/factIndonesia.json`.
+- A separate, runnable FACT information preview with its own entry, components,
+  content validators, service data, FAQ, and contact actions.
+- Automated content/publication checks and a read-only CI workflow.
 - Owner-supplied FACT portfolio visuals and documentation.
 
 ## Excluded
@@ -23,12 +25,14 @@ user uploads, runtime storage, and deployment configuration are not published.
 
 The imported source retains RoyalVilla's property domain and names. It is shared
 engineering material, not a finished FACT learning management system. The
-mockups document a separate FACT design direction and are not screenshots
-rendered by the inherited React source.
+independent preview implements information discovery only. The supplied
+mockups document a separate design direction, not a pixel-identical rendering
+of either frontend.
 
 `npm run build` compiles the presentation bundle. It does not create a working
-website without the excluded Laravel runtime. Backend samples remain
-non-runnable examples without their private schema and application wiring.
+inherited website without the excluded Laravel runtime. `npm run dev:fact` and
+`npm run build:fact` run/build the independent preview without Laravel. Backend
+samples remain non-runnable without their private schema and application wiring.
 
 See [provenance](docs/provenance.md) and the
 [verification limits](docs/quality/verification.md).

@@ -28,10 +28,12 @@
 
 > [!IMPORTANT]
 > This repository brings together a FACT Indonesia visual case study and the
-> shared frontend and sanitized Laravel examples from RoyalVilla. The imported
-> code still uses the property domain; the FACT mockups are a separate design
-> concept. This is not the source of the official FACT website or a completed
-> learning platform. Private runtime, credentials, and customer data are excluded.
+> shared frontend and sanitized Laravel examples from RoyalVilla. A separate,
+> runnable FACT information preview now provides service discovery and contact.
+> The inherited code still uses the property domain, and the supplied mockups
+> remain a separate design concept. This is not the source of the official FACT
+> website or a completed learning platform. Private runtime and customer data
+> are excluded.
 
 ## Overview
 
@@ -48,6 +50,8 @@ to action, and a coherent path back when a page cannot be found.
 The engineering publication starts from an existing RoyalVilla foundation
 rather than presenting a separately completed FACT application. This keeps the
 source origin reviewable and makes the remaining adaptation work explicit.
+The standalone FACT preview adds a verified information journey without
+initializing the inherited account, property, payment, or tracking runtime.
 
 ## Product At A Glance
 
@@ -76,7 +80,32 @@ The official site presents the following service categories:
 The reference taxonomy is recorded in
 [`factIndonesia.json`](resources/js/Data/factIndonesia.json).
 It reflects the [official service overview](https://fact-indonesia.com/), not
-an inventory of implemented modules in this repository.
+an inventory of scheduled courses or a production learning platform.
+
+## Standalone FACT Preview
+
+The second publication batch implements an independent React information
+surface using the official service taxonomy:
+
+| Implemented Surface | Behavior |
+| --- | --- |
+| Service discovery | Five reference services, text search, category filter, and announced result counts |
+| Catalogue states | Explicit loading, error, empty inventory, and no-match recovery |
+| Service detail | Shareable selections, native modal dialogs, Escape, and browser-history navigation |
+| Organization | A reusable profile connected to the official reference content |
+| FAQ | Keyboard-operable native disclosures and labelled reference/policy content |
+| Contact | Verified outbound website/profile links, without participant forms or payment calls |
+| Quality | Content contracts, source checks, asset checksums, import-boundary checks, and CI |
+
+```bash
+npm ci
+npm run dev:fact
+```
+
+Open `/fact-preview.html` on the local URL printed by Vite. This preview does
+not require Laravel. Its production bundle is generated with
+`npm run build:fact` in the ignored `dist-fact` directory. See the
+[preview guide](docs/preview.md) and [content contract](docs/product/content-contract.md).
 
 ## Experience Model
 
@@ -89,8 +118,9 @@ flowchart LR
     F --> B
 ```
 
-This is the intended information journey. Implementing it requires adapting the
-shared application domain and verifying the resulting interface contracts.
+The standalone preview implements discovery, service detail, FAQ, and official
+contact. Enrollment, payments, participant accounts, learning progress, and
+certificate issuance remain outside the implemented journey.
 
 ## Selected Experiences
 
@@ -126,11 +156,12 @@ flowchart TB
     Laravel[Private Laravel 11 runtime]
     Examples[Sanitized backend examples]
     Reference[FACT organization reference]
+    Preview[Independent FACT information preview]
 
     React --> Inertia
     Inertia -. requires .-> Laravel
     Examples -. demonstrates .-> Laravel
-    Reference -. adaptation input .-> React
+    Reference --> Preview
 ```
 
 The runtime shown above is intentionally not included. Read the
@@ -142,12 +173,13 @@ property, account, payment, or administration flows as FACT features.
 
 | Layer | Technology | Published Responsibility |
 | --- | --- | --- |
-| Interface | React 18, Inertia.js 2 | Pages, layouts, shared components, and server-driven navigation patterns |
-| Styling | Tailwind CSS 3 | Responsive interface styling and states |
+| Interface | React 18, Inertia.js 2 | Standalone FACT preview and inherited server-driven navigation patterns |
+| Styling | Scoped CSS, Tailwind CSS 3 | FACT information styling and inherited interface states |
 | Tooling | Vite 6 | Development and production frontend asset pipeline |
 | Interaction | Swiper, Framer Motion | Inherited collections and transition patterns |
 | Backend examples | PHP 8.2+, Laravel 11 | Sanitized models, validation, catalogue queries, and transactional moderation |
-| Content | Local JSON | FACT organization reference and published service categories |
+| Content | Local JSON and validators | FACT organization, service records, FAQ, and source provenance |
+| Verification | Node test runner, GitHub Actions | Content, publication, import graph, and both frontend builds |
 
 ## Published Source
 
@@ -156,8 +188,9 @@ fonts and interface assets. `backend` contains selected, sanitized Laravel
 examples that remain in their original RoyalVilla namespace.
 
 The import deliberately preserves source terminology instead of pretending
-that a property listing is already a training program. FACT-specific business
-rules, records, permissions, and interface behavior remain adaptation work.
+that a property listing is already a training program. FACT information records
+and components are separate from the inherited property domain. Production
+enrollment, learner permissions, and transaction rules remain adaptation work.
 
 The exact inclusion and exclusion boundary is documented in
 [SOURCE-CODE.md](SOURCE-CODE.md).
@@ -166,11 +199,14 @@ The exact inclusion and exclusion boundary is documented in
 
 ```bash
 npm ci
+npm test
 npm run build
+npm run build:fact
+npm run check:publication
 ```
 
-These commands install the locked frontend dependencies and compile the
-presentation bundle. They do not launch the omitted Laravel application or
+These commands verify the FACT contracts and publication boundary and build
+both frontend surfaces. They do not launch the omitted Laravel application or
 deploy the official website. Backend feature examples require their private
 application wiring. See [verification and limits](docs/quality/verification.md).
 
@@ -195,15 +231,17 @@ are not inferred from the inherited marketplace examples.
 | [Design](docs/design/overview.md) | FACT mockup direction versus inherited styling |
 | [Gallery](docs/gallery.md) | Supplied home, catalogue, and recovery visuals |
 | [References](docs/sources.md) | Official sources used for context |
+| [Preview](docs/preview.md) | Running the independent FACT information surface |
+| [Content contract](docs/product/content-contract.md) | Service taxonomy, source review, and data boundaries |
 | [Roadmap](docs/roadmap.md) | Substantive adaptation and verification work |
 
 The full index is available in [docs/README.md](docs/README.md).
 
 ## Project Status
 
-Fact-Indonesia is a portfolio case study with a shared source foundation and
-a separate FACT visual concept. It is not a production service, a deployable
-starter kit, or a claim of ownership of the official FACT website.
+Fact-Indonesia is a portfolio case study with a runnable information preview,
+a shared source foundation, and separate supplied mockups. It is not a
+production learning service or a claim of ownership of the official website.
 
 ## Ownership
 

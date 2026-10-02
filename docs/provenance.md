@@ -26,3 +26,9 @@ The first batch establishes the imported foundation, reference content,
 documentation, and visual case study. Further changes should adapt and verify
 the FACT domain in real, reviewable increments. No empty commits, copied
 historical dates, or future-dated commits are part of the publication plan.
+
+The second batch adds a separate FACT information preview and its validation,
+publication checks, and CI. It does not rename inherited property records into
+training records or represent the official FACT site as this source. Its ten
+substantive commits were created across 2-3 October 2026 in Jakarta, using real
+Git timestamps. The first ten published commits are preserved.
