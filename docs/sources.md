@@ -1,24 +1,34 @@
 # Content References
 
-Initial reference review: 28 September 2026. Service taxonomy and profile
-rechecked on 2 October 2026 for the standalone FACT preview.
+This page separates external business references from owner-supplied portfolio
+visuals. References are not a grant to reproduce the official site's source,
+identity, or other third-party material.
 
 | Reference | Use |
 | --- | --- |
-| [FACT Indonesia](https://fact-indonesia.com/) | Organization name and published service categories |
-| [About FACT Indonesia](https://fact-indonesia.com/profile/) | Training, consultancy, development, and creative positioning |
-| [RoyalVilla source](https://github.com/ibamzjr/RoyalVilla) | Shared React presentation and curated Laravel examples |
+| [FACT Indonesia](https://fact-indonesia.com/) | Official organization destination and service-category context |
+| [About FACT Indonesia](https://fact-indonesia.com/profile/) | Organization profile reference |
+| [GitHub Terms of Service](https://docs.github.com/en/site-policy/github-terms/github-terms-of-service#d-user-generated-content) | Public-hosting and platform-rights qualification |
+| [GitHub history-removal guidance](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/removing-sensitive-data-from-a-repository) | Distinction between current-file deletion and historical removal |
 
-The official FACT site is a reference and outbound destination. This repository
-is not represented as its deployed source, and no ownership of FACT trademarks
-or official material is implied. Public participant counts and team membership
-are deliberately not copied as permanent project data.
+## Reference Review
 
-Portfolio mockups supplied by the repository owner are documented separately
-in the [visual gallery](gallery.md).
+Business references were initially reviewed on 28 September 2026 and revisited
+on 2 October 2026. For the portfolio update on 5 October 2026, direct homepage
+and profile requests could not be retrieved. An indexed copy of the official
+homepage supported the existing organization and service-category context;
+it is not treated as a fresh verification of all live content.
 
-The second review used the indexed homepage overview after direct homepage
-requests timed out; the profile page was accessible. The local source registry
-records this distinction. Categories used for filtering and portfolio policy
-answers are editorial, not additional official service or enrollment claims.
-See the [content contract](product/content-contract.md).
+The portfolio deliberately does not publish current participant totals, team
+membership, schedules, fees, or course availability as maintained project data.
+Visitors should confirm those details through official channels.
+
+## Portfolio Evidence
+
+The [visual gallery](gallery.md) and [asset manifest](../assets/manifest.json)
+identify the owner-supplied mockups. They establish image provenance, not
+production behavior or ownership of third-party content within the images.
+See [NOTICE.md](../NOTICE.md) for that boundary.
+
+Historical implementation provenance is recorded in [provenance](provenance.md)
+without offering another repository as a substitute source download.

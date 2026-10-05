@@ -1,34 +1,40 @@
 # Source Provenance
 
-## Shared Foundation
+## Current Materials
 
-The code was imported from the already-public RoyalVilla showcase at commit
-`b9bce35`. The import includes only its tracked presentation files, frontend
-configuration, public assets, license, and sanitized backend examples.
+The current public tree contains three owner-supplied PNG exports, their asset
+manifest, and portfolio documentation. The images were supplied from the
+owner's Royalvilla asset folder and retained without alteration. The
+[gallery](gallery.md) records their original and published filenames.
 
-The original application directory and its Git repository are unchanged.
-Fact-Indonesia has its own Git history; the original RoyalVilla history is not
-represented as FACT development.
+Business context is attributed to [official references](sources.md). The
+mockups are not presented as the official website's source, a verified live
+service, or an endorsed client delivery.
 
-Property-specific names, business concepts, contacts, and integration endpoints
-in the imported source remain inherited examples. They must be audited and
-adapted before any FACT runtime is published.
+## Earlier Publication
 
-## FACT Material
+The first ten commits imported an already-public RoyalVilla presentation
+foundation, selected Laravel examples, references, and the visual case study.
+The import came from RoyalVilla commit `b9bce35`; it was not separately
+completed FACT application development.
 
-The organization context comes from the official sources listed in
-[content references](sources.md). The supplied FACT images are portfolio
-mockups, not evidence that this repository powers the official site.
+The next ten commits added an independent FACT information preview, contracts,
+and build verification. These earlier files remained separate from the
+supplied visual mockups and did not implement a production learning platform.
 
-## Publication Batches
+## Portfolio-Only Update
 
-The first batch establishes the imported foundation, reference content,
-documentation, and visual case study. Further changes should adapt and verify
-the FACT domain in real, reviewable increments. No empty commits, copied
-historical dates, or future-dated commits are part of the publication plan.
+On 5 October 2026, the owner requested removal of FE/BE from the current tree
+while keeping this repository public. The owner also explicitly requested a
+normal update, without deleting or rewriting the previous history.
 
-The second batch adds a separate FACT information preview and its validation,
-publication checks, and CI. It does not rename inherited property records into
-training records or represent the official FACT site as this source. Its ten
-substantive commits were created across 2-3 October 2026 in Jakarta, using real
-Git timestamps. The first ten published commits are preserved.
+Seven non-empty update commits therefore replace the current source-facing
+publication with a visual-only showcase. The preceding 20 commits remain
+unchanged and reachable, including their source files. No claim of historical
+source confidentiality is made.
+
+The update does not change the RoyalVilla repository, external asset originals,
+other projects, or third-party ownership. Commit dates describe when the
+publication work was performed, not invented feature-development dates.
+
+See [source policy](../SOURCE-CODE.md) and [changelog](../CHANGELOG.md).
