@@ -1,61 +1,49 @@
 # Verification And Limits
 
-## Automated Checks
+The relevant unit of verification is the current tracked portfolio tree.
+The preceding 20 commits are intentionally preserved; this review does not
+claim to remove source from those commits.
 
-```bash
-npm ci
-npm test
-npm run build
-npm run build:fact
-npm run check:publication
-```
+## Publication Review
 
-`npm test` runs 22 checks covering content validation, catalogue states,
-selection URLs, contact destinations, source consistency, publication paths,
-local documentation links, asset checksums, and the standalone build graph.
-`npm run build` compiles the inherited presentation; `npm run build:fact`
-compiles the independent static preview. Neither deploys the official FACT site.
+The portfolio update is checked for the following properties:
 
-The GitHub workflow runs tests and both builds with Node 24, pinned actions,
-read-only repository permissions, and no retained checkout credentials.
+| Check | Boundary |
+| --- | --- |
+| Tracked-file allowlist | Only approved Markdown, metadata, three PNGs, and the image manifest |
+| Withdrawn implementation | No FE/BE directories, package files, build tooling, app tests, or generated bundles in the current tree |
+| Documentation links | Relative Markdown and embedded image/link targets resolve within the approved tree |
+| Image integrity | Original byte sizes and SHA-256 values agree with the unchanged manifest |
+| Image payload review | Retained PNGs have no text/source metadata chunks or trailing payloads |
+| Staged content | No credential signatures, private implementation snippets, or current runnable-preview claims |
+| Git continuity | The original 20 commits remain ancestors; exactly seven non-empty updates are added |
+| Remote state | Public visibility and the pushed main head are checked after publication |
 
-## Publication Checks
+Publication validation is performed with local tools outside the public
+showcase. Application test scripts and build CI have been withdrawn rather
+than kept as source-bearing files. An ignore allowlist reduces accidental
+additions but does not prevent forced staging or affect historical commits.
 
-- Verify local documentation links and all README image paths.
-- Keep runtime data, environment files, and credentials outside Git history.
-- Check imported PHP examples for syntax with `php -l`.
-- Preserve attribution and distinguish reference content from implementation.
-- Check the complete commit history for non-empty, accurately named changes.
+## Review Without Application Setup
 
-The publication script verifies tracked file paths, common credential formats,
-local Markdown/HTML link targets, and all three original asset checksums. It is
-not a comprehensive secret scanner or an audit of the omitted private runtime.
+No dependency installation or application build is needed to inspect the
+case study. A maintainer can inspect the current tracked inventory with
+`git ls-files`, review staged changes with `git diff --cached`, and check text
+formatting with `git diff --check`. The
+[asset manifest](../../assets/manifest.json) supplies the image-integrity baseline.
 
-## Browser And Syntax Verification
+The [gallery](../gallery.md) identifies presentation claims and their limits.
+The [source policy](../../SOURCE-CODE.md) states the retained-history caveat.
 
-The second batch was checked in Chrome on 3 October 2026:
+## Limits
 
-- Desktop catalogue, service detail, text search, and category filters.
-- Reset from an unmatched search/category combination.
-- Browser Back/Forward restores the selected service.
-- FAQ expansion with pointer/Enter and unknown-service recovery.
-- Escape closes detail, restores focus, and releases body scrolling.
-- Layouts at 320px, 390px, and 820px without horizontal page overflow.
-- Owner image loads with its reserved aspect ratio; no console errors observed.
+Static images do not verify responsive behavior, keyboard access, animation,
+runtime performance, transaction safety, or production deployment. No private
+implementation, official-site security, or operational-readiness audit is
+implied. A successful publication check is not an application certification.
 
-All 11 curated PHP files passed `php -l`. Their backend feature tests were not
-run because the private application, schema, and runtime wiring are excluded.
-
-Existing inherited build warnings remain: old Browserslist data, public font
-and background URLs resolved at runtime, and the Profile static/dynamic import.
-The standalone build has no inherited font/background/import warnings.
-
-## Remaining Limits
-
-The official FACT site is not deployed from this repository. Enrollment,
-learning progress, certificates, FACT authentication, and FACT payment handling
-are not implemented by this publication. Imported backend feature tests require
-the excluded private application and cannot run independently here.
-
-No production security, accessibility, performance, or operational-readiness
-certification is implied by a successful build.
+Removing files from the current version cannot prevent access through previous
+commits, forks, downloaded copies, or other repositories. Repository terms
+cannot create confidentiality for material that remains public. Historical
+build and test results belong to the earlier publication, not the current
+visual-only version.
