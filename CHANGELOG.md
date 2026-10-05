@@ -1,5 +1,27 @@
 # Changelog
 
+## 2026-10-05 - Portfolio-Only Current Version
+
+- Withdrew frontend, backend examples, application data, inherited assets,
+  templates, styles, fonts, dependency files, tests, and build configuration.
+- Removed the independent runnable preview and application build CI.
+- Preserved the three owner-supplied PNGs and their integrity manifest unchanged.
+- Established an explicit presentation-file allowlist for future additions.
+- Replaced source/run claims with a visual case study and exclusive source-sharing policy.
+- Qualified reserved rights for GitHub terms, prior valid permissions, and third-party ownership.
+- Updated gallery, provenance, references, security, contributions, and verification limits.
+
+Exactly seven non-empty updates are appended to the existing 20 commits,
+bringing the retained history to 27. The owner requested no history rewrite;
+earlier source is still publicly accessible. The update is not represented as
+a confidentiality guarantee or an application deployment.
+
+## Historical Source-Bearing Versions
+
+The entries below describe earlier releases, not the current file tree.
+Their implementation and build tooling were withdrawn from the latest version
+by the update above; their commits remain intact.
+
 ## 2026-10-02 To 2026-10-03
 
 - Added a standalone FACT service-information preview without private Laravel.

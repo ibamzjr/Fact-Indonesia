@@ -1,12 +1,12 @@
 <p align="center">
-  <img src="assets/fact-indonesia-hero.png" width="100%" alt="FACT Indonesia learning and development portfolio displayed on a laptop" />
+  <img src="assets/fact-indonesia-hero.png" width="100%" alt="FACT Indonesia learning and development portfolio concept displayed on a laptop" />
 </p>
 
 <h1 align="center">FACT Indonesia</h1>
 
 <p align="center">
-  A learning-focused digital presence for training, consultancy,
-  creative growth, and meaningful professional development.
+  A visual portfolio for a learning-focused digital presence:
+  training, consultancy, and purposeful professional development.
 </p>
 
 <p align="center">
@@ -14,123 +14,50 @@
   &nbsp; / &nbsp;
   <a href="docs/gallery.md">Visual Gallery</a>
   &nbsp; / &nbsp;
-  <a href="SOURCE-CODE.md">Published Source</a>
+  <a href="SOURCE-CODE.md">Implementation Policy</a>
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/status-portfolio_case_study-252231?style=flat-square" alt="Portfolio case study" />
-  <img src="https://img.shields.io/badge/Laravel-11-FF2D20?style=flat-square&logo=laravel&logoColor=white" alt="Laravel 11 foundation" />
-  <img src="https://img.shields.io/badge/React-18-20232A?style=flat-square&logo=react&logoColor=61DAFB" alt="React 18" />
-  <img src="https://img.shields.io/badge/Inertia.js-2-6B46C1?style=flat-square" alt="Inertia.js 2" />
-  <img src="https://img.shields.io/badge/Tailwind_CSS-3-0F172A?style=flat-square&logo=tailwindcss&logoColor=38BDF8" alt="Tailwind CSS 3" />
-  <img src="https://img.shields.io/badge/rights-reserved-E7B828?style=flat-square" alt="All rights reserved" />
+  <img src="https://img.shields.io/badge/publication-visual_portfolio-252231?style=flat-square" alt="Visual portfolio publication" />
+  <img src="https://img.shields.io/badge/implementation-not_distributed-20232A?style=flat-square" alt="Implementation not distributed in the current version" />
+  <img src="https://img.shields.io/badge/rights-all_rights_reserved-E7B828?style=flat-square" alt="All rights reserved" />
 </p>
 
 > [!IMPORTANT]
-> This repository brings together a FACT Indonesia visual case study and the
-> shared frontend and sanitized Laravel examples from RoyalVilla. A separate,
-> runnable FACT information preview now provides service discovery and contact.
-> The inherited code still uses the property domain, and the supplied mockups
-> remain a separate design concept. This is not the source of the official FACT
-> website or a completed learning platform. Private runtime and customer data
-> are excluded.
+> **This is a public visual portfolio, not an open-source application.**
+> The latest version contains presentation images and case-study documentation
+> only. Frontend and backend source, runtime data, build tooling, and deployable
+> bundles are not included. Any authorized implementation access or delivery
+> must be agreed separately in writing through a private channel.
+
+> [!WARNING]
+> **Earlier source remains in Git history.** At the owner's request, the
+> preceding 20 commits are preserved rather than rewritten. Their code is still
+> publicly accessible. This update does not make that material confidential,
+> remove existing copies, or retroactively revoke valid prior rights.
+> See the [publication boundary](SOURCE-CODE.md).
 
 ## Overview
 
-FACT stands for Focus Area Collaborative Team. The organization works in
-training and consultancy, with an emphasis on personal capability, organizational
-development, entrepreneurship, and creative participation. Its official profile
-provides the business context for this portfolio.
-[About FACT Indonesia](https://fact-indonesia.com/profile/).
+The portfolio explores an approachable learning-oriented identity through
+three selected visual outcomes: an introductory home experience, a catalogue
+presentation, and a considered recovery state.
 
-The visual concept turns that context into an approachable learning experience:
-clear program discovery, a confident institutional identity, purposeful calls
-to action, and a coherent path back when a page cannot be found.
-
-The engineering publication starts from an existing RoyalVilla foundation
-rather than presenting a separately completed FACT application. This keeps the
-source origin reviewable and makes the remaining adaptation work explicit.
-The standalone FACT preview adds a verified information journey without
-initializing the inherited account, property, payment, or tracking runtime.
-
-## Product At A Glance
-
-| Area | FACT Portfolio Direction |
-| --- | --- |
-| Institutional identity | A clear introduction to the organization and its development focus |
-| Learning discovery | A browsable course and service concept illustrated in the supplied catalogue mockup |
-| Program context | Readable information that supports comparison and informed contact |
-| Professional growth | A business context for capability development and career transitions |
-| Creative participation | A direction for entrepreneurship, collaboration, and community engagement |
-| Recovery | A designed not-found state with a clear return path |
-
-These are business and design directions. The current source does not implement
-FACT enrollment, learner progress, certificate issuance, or production checkout.
-
-## Service Context
-
-The official site presents the following service categories:
-
-- Pre Retirement Training.
-- Pelatihan Kewirausahaan dan Pendampingan Usaha.
-- CSR & Layanan Riset.
-- Event Organizer.
-- Outplacement & Capacity Building.
-
-The reference taxonomy is recorded in
-[`factIndonesia.json`](resources/js/Data/factIndonesia.json).
-It reflects the [official service overview](https://fact-indonesia.com/), not
-an inventory of scheduled courses or a production learning platform.
-
-## Standalone FACT Preview
-
-The second publication batch implements an independent React information
-surface using the official service taxonomy:
-
-| Implemented Surface | Behavior |
-| --- | --- |
-| Service discovery | Five reference services, text search, category filter, and announced result counts |
-| Catalogue states | Explicit loading, error, empty inventory, and no-match recovery |
-| Service detail | Shareable selections, native modal dialogs, Escape, and browser-history navigation |
-| Organization | A reusable profile connected to the official reference content |
-| FAQ | Keyboard-operable native disclosures and labelled reference/policy content |
-| Contact | Verified outbound website/profile links, without participant forms or payment calls |
-| Quality | Content contracts, source checks, asset checksums, import-boundary checks, and CI |
-
-```bash
-npm ci
-npm run dev:fact
-```
-
-Open `/fact-preview.html` on the local URL printed by Vite. This preview does
-not require Laravel. Its production bundle is generated with
-`npm run build:fact` in the ignored `dist-fact` directory. See the
-[preview guide](docs/preview.md) and [content contract](docs/product/content-contract.md).
-
-## Experience Model
-
-```mermaid
-flowchart LR
-    A[Meet FACT Indonesia] --> B[Explore learning and services]
-    B --> C[Inspect program context]
-    C --> D[Contact or choose a next step]
-    E[Unavailable page] --> F[Return to a known destination]
-    F --> B
-```
-
-The standalone preview implements discovery, service detail, FAQ, and official
-contact. Enrollment, payments, participant accounts, learning progress, and
-certificate issuance remain outside the implemented journey.
+[FACT Indonesia](https://fact-indonesia.com/) provides the training and
+consultancy context. Its official website is an external reference, not a
+deployment generated from this repository. The supplied images are design
+mockups, not a claim of ownership of the official site or an endorsed
+production learning platform.
 
 ## Selected Experiences
 
 <table>
   <tr>
     <td width="50%">
-      <img src="assets/fact-indonesia-catalogue.png" alt="FACT Indonesia course catalogue portfolio mockup" />
+      <img src="assets/fact-indonesia-catalogue.png" alt="FACT Indonesia learning catalogue portfolio concept" />
     </td>
     <td width="50%">
-      <img src="assets/fact-indonesia-recovery.png" alt="FACT Indonesia not-found recovery portfolio mockup" />
+      <img src="assets/fact-indonesia-recovery.png" alt="FACT Indonesia unavailable-page recovery portfolio concept" />
     </td>
   </tr>
   <tr>
@@ -139,115 +66,83 @@ certificate issuance remain outside the implemented journey.
   </tr>
 </table>
 
-These owner-supplied visuals represent the FACT design concept. They are not
-screenshots rendered by the inherited source. See the complete
-[visual gallery](docs/gallery.md) for asset provenance.
+All three owner-supplied PNGs are preserved without alteration. The
+[visual gallery](docs/gallery.md) provides complete views and provenance;
+the [asset manifest](assets/manifest.json) records sizes and SHA-256 checksums.
 
-## Shared Engineering Foundation
+Course labels, prices, ratings, participant figures, contact details, and
+logos within the images are illustrative presentation content, not
+independently verified live information.
 
-The published source retains RoyalVilla's React interface and curated Laravel
-examples. It covers reusable patterns for layouts, controls, request state,
-account screens, payment feedback, administration, validation, and moderation.
+## Product At A Glance
 
-```mermaid
-flowchart TB
-    React[React 18 presentation]
-    Inertia[Inertia.js page boundary]
-    Laravel[Private Laravel 11 runtime]
-    Examples[Sanitized backend examples]
-    Reference[FACT organization reference]
-    Preview[Independent FACT information preview]
-
-    React --> Inertia
-    Inertia -. requires .-> Laravel
-    Examples -. demonstrates .-> Laravel
-    Reference --> Preview
-```
-
-The runtime shown above is intentionally not included. Read the
-[architecture overview](docs/architecture/overview.md) and
-[source provenance](docs/provenance.md) before interpreting the inherited
-property, account, payment, or administration flows as FACT features.
-
-## Technology Profile
-
-| Layer | Technology | Published Responsibility |
-| --- | --- | --- |
-| Interface | React 18, Inertia.js 2 | Standalone FACT preview and inherited server-driven navigation patterns |
-| Styling | Scoped CSS, Tailwind CSS 3 | FACT information styling and inherited interface states |
-| Tooling | Vite 6 | Development and production frontend asset pipeline |
-| Interaction | Swiper, Framer Motion | Inherited collections and transition patterns |
-| Backend examples | PHP 8.2+, Laravel 11 | Sanitized models, validation, catalogue queries, and transactional moderation |
-| Content | Local JSON and validators | FACT organization, service records, FAQ, and source provenance |
-| Verification | Node test runner, GitHub Actions | Content, publication, import graph, and both frontend builds |
-
-## Published Source
-
-`resources` contains the inherited presentation layer. `public` contains its
-fonts and interface assets. `backend` contains selected, sanitized Laravel
-examples that remain in their original RoyalVilla namespace.
-
-The import deliberately preserves source terminology instead of pretending
-that a property listing is already a training program. FACT information records
-and components are separate from the inherited property domain. Production
-enrollment, learner permissions, and transaction rules remain adaptation work.
-
-The exact inclusion and exclusion boundary is documented in
-[SOURCE-CODE.md](SOURCE-CODE.md).
-
-## Verification
-
-```bash
-npm ci
-npm test
-npm run build
-npm run build:fact
-npm run check:publication
-```
-
-These commands verify the FACT contracts and publication boundary and build
-both frontend surfaces. They do not launch the omitted Laravel application or
-deploy the official website. Backend feature examples require their private
-application wiring. See [verification and limits](docs/quality/verification.md).
-
-## Trust And Privacy
-
-The publication excludes environment files, credentials, database exports,
-runtime routes, authentication services, payment operations, session records,
-logs, personal documents, customer uploads, and deployment infrastructure.
-
-A future training platform would need its own consent, participant-data,
-authorization, enrollment, payment, and certificate policies. Those controls
-are not inferred from the inherited marketplace examples.
-
-## Documentation Map
-
-| Collection | Focus |
+| Visual Outcome | Portfolio Focus |
 | --- | --- |
-| [Source boundary](SOURCE-CODE.md) | Included engineering material and private exclusions |
-| [Provenance](docs/provenance.md) | Shared RoyalVilla origin and independent FACT publication |
-| [Product context](docs/product/context.md) | Audiences and business direction |
-| [Architecture](docs/architecture/overview.md) | Source responsibilities and runtime boundary |
-| [Design](docs/design/overview.md) | FACT mockup direction versus inherited styling |
-| [Gallery](docs/gallery.md) | Supplied home, catalogue, and recovery visuals |
-| [References](docs/sources.md) | Official sources used for context |
-| [Preview](docs/preview.md) | Running the independent FACT information surface |
-| [Content contract](docs/product/content-contract.md) | Service taxonomy, source review, and data boundaries |
-| [Roadmap](docs/roadmap.md) | Substantive adaptation and verification work |
+| Institutional home | Identity, introductory hierarchy, and clear next steps |
+| Learning catalogue | Scannable options and consistent content presentation |
+| Recovery experience | A recognizable unavailable-page state and a return path |
 
-The full index is available in [docs/README.md](docs/README.md).
+These are visible design directions. Static images do not demonstrate working
+enrollment, accounts, payments, certificates, responsive behavior, accessibility,
+animation, or production performance. See
+[product context](docs/product/context.md) and
+[visual direction](docs/design/overview.md).
 
-## Project Status
+## Publication Boundary
 
-Fact-Indonesia is a portfolio case study with a runnable information preview,
-a shared source foundation, and separate supplied mockups. It is not a
-production learning service or a claim of ownership of the official website.
+| Present In The Latest Version | Not Distributed In The Latest Version |
+| --- | --- |
+| Three selected portfolio PNGs | Frontend pages, components, templates, styles, and fonts |
+| Image-integrity manifest | Backend models, controllers, services, and application tests |
+| Case-study and policy documentation | Dependency files, build configuration, CI, bundles, and source maps |
+| Minimal repository/editor metadata | Runtime data, APIs, credentials, databases, and deployment files |
+
+No dependency installation, local application server, or build step is
+provided. The current repository is read through GitHub as a visual case study.
+
+The owner's implementation-sharing policy is exclusive, not an open-source
+offer. Public presentation does not grant additional rights to reuse,
+redistribute, sell, or deploy the owner's work. GitHub's public-hosting terms,
+applicable law, existing valid permissions, and third-party rights still apply.
+See [LICENSE.md](LICENSE.md) and [NOTICE.md](NOTICE.md).
+
+## Publication Update
+
+On 5 October 2026, the source-facing publication was replaced with this
+portfolio-only current version through **seven non-empty update commits**.
+The original 20 commits remain intact, producing 27 commits in the retained
+history. No force push, historical erasure, or invented development history
+is represented by this update.
+
+The [provenance record](docs/provenance.md) distinguishes the earlier imported
+foundation and information preview from the current visual-only publication.
+
+## Documentation
+
+| Document | Focus |
+| --- | --- |
+| [Visual gallery](docs/gallery.md) | Selected outcomes and unchanged image exports |
+| [Product context](docs/product/context.md) | Intended audience and reference boundaries |
+| [Visual direction](docs/design/overview.md) | Presentation hierarchy and static-image limits |
+| [Implementation policy](SOURCE-CODE.md) | Current exclusions and retained historical source |
+| [Provenance](docs/provenance.md) | Image origins and accurate publication chronology |
+| [References](docs/sources.md) | Official context and public-hosting qualifications |
+| [Verification](docs/quality/verification.md) | Portfolio checks, not application certification |
+| [Maintenance](docs/roadmap.md) | Approved future presentation updates |
+| [Changelog](CHANGELOG.md) | Current update and clearly labelled historical releases |
+
+See the [documentation index](docs/README.md),
+[contribution policy](CONTRIBUTING.md), and [security policy](SECURITY.md)
+before proposing changes. Do not post implementation or confidential material
+in public issues or pull requests.
 
 ## Ownership
 
 Published and maintained by [ibamzjr](https://github.com/ibamzjr).
-FACT Indonesia and other third-party names remain associated with their
-respective rights holders.
+FACT Indonesia and other third-party names, marks, and materials remain
+subject to their respective rights holders.
 
-Copyright (c) 2026 ibamzjr. All rights reserved. See
-[LICENSE.md](LICENSE.md) and [NOTICE.md](NOTICE.md) for repository terms.
+Copyright (c) 2026 ibamzjr. All rights reserved in the owner's original
+portfolio materials. This public showcase is not an open-source software
+license; additional use requires written authorization subject to the
+qualifications in [LICENSE.md](LICENSE.md).
