@@ -1,30 +1,36 @@
-# Operating system and editor files
-.DS_Store
-Thumbs.db
-.idea/
-.vscode/
+# This checkout publishes presentation material only.
+# New paths require explicit review before extending this allowlist.
+/*
+!/.gitignore
+!/.gitattributes
+!/.editorconfig
+!/README.md
+!/LICENSE.md
+!/NOTICE.md
+!/SOURCE-CODE.md
+!/SECURITY.md
+!/CONTRIBUTING.md
+!/CHANGELOG.md
+!/docs/
+!/assets/
 
-# Local notes and generated previews
-*.tmp
-*.log
-.cache/
+/docs/**
+!/docs/README.md
+!/docs/gallery.md
+!/docs/provenance.md
+!/docs/roadmap.md
+!/docs/sources.md
+!/docs/design/
+!/docs/design/overview.md
+!/docs/product/
+!/docs/product/context.md
+!/docs/quality/
+!/docs/quality/verification.md
 
-# Never publish implementation or runtime material here
-.env*
-*.sql
-storage/
-vendor/
-node_modules/
-public/build/
-public/hot
-public/storage/
+/assets/*
+!/assets/fact-indonesia-hero.png
+!/assets/fact-indonesia-catalogue.png
+!/assets/fact-indonesia-recovery.png
+!/assets/manifest.json
 
-# Private application and local publication material
-.vercel/
-*.sqlite
-*.sqlite3
-auth.json
-*.pem
-*.key
-coverage/
-dist-fact/
+# Git ignores do not affect existing history or files staged with --force.

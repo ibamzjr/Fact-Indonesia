@@ -1,38 +1,47 @@
-# Published Source Boundary
+# Implementation And Publication Policy
 
-Fact-Indonesia combines FACT portfolio material with a shared application
-foundation imported from [RoyalVilla](https://github.com/ibamzjr/RoyalVilla).
+**The current version is a public portfolio, not an application source
+distribution. Frontend and backend implementation are not included.**
 
-## Included
+## Current Publication Boundary
 
-- Complete inherited React/Inertia pages, layouts, components, hooks, contexts,
-  utilities, and local display data under `resources`.
-- Public interface imagery, icons, fonts, and Vite/Tailwind configuration.
-- Sanitized Laravel models, validation, catalogue, moderation, and test examples
-  under `backend`.
-- A separate, runnable FACT information preview with its own entry, components,
-  content validators, service data, FAQ, and contact actions.
-- Automated content/publication checks and a read-only CI workflow.
-- Owner-supplied FACT portfolio visuals and documentation.
+| Public Material | Purpose |
+| --- | --- |
+| Three owner-supplied PNGs | Selected visual outcomes for portfolio evaluation |
+| Asset manifest | Original filenames, sizes, and integrity checksums |
+| Markdown documentation | Case study, image provenance, and publication policies |
+| Git/editor metadata | Text formatting and an explicit presentation-file allowlist |
 
-## Excluded
+The current tree does not include FE/BE source, components, templates, styles,
+runtime data, fonts, dependency manifests, build configuration, tests,
+application CI, compiled bundles, source maps, APIs, databases, credentials,
+or deployment files. There is no local application setup or build command.
 
-The operational Laravel bootstrap, routes, migrations, authentication services,
-payment/webhook implementations, environment files, secrets, database exports,
-user uploads, runtime storage, and deployment configuration are not published.
+The permitted paths are listed in [.gitignore](.gitignore). A Git ignore list
+helps prevent accidental additions; it is not access control, does not block
+forced staging, and does not remove anything from existing history.
 
-## Current Meaning
+## Exclusive Source-Sharing Policy
 
-The imported source retains RoyalVilla's property domain and names. It is shared
-engineering material, not a finished FACT learning management system. The
-independent preview implements information discovery only. The supplied
-mockups document a separate design direction, not a pixel-identical rendering
-of either frontend.
+The repository owner does not authorize distribution or reuse of the owner's
+implementation through this public showcase. Any authorized implementation
+review or delivery must be governed by a separate written agreement and a
+private channel. This repository offers no open-source implementation license.
+See [repository terms](LICENSE.md) and [ownership notice](NOTICE.md).
 
-`npm run build` compiles the presentation bundle. It does not create a working
-inherited website without the excluded Laravel runtime. `npm run dev:fact` and
-`npm run build:fact` run/build the independent preview without Laravel. Backend
-samples remain non-runnable without their private schema and application wiring.
+## Retained History
 
-See [provenance](docs/provenance.md) and the
-[verification limits](docs/quality/verification.md).
+The owner explicitly chose a normal update rather than a history rewrite.
+The preceding 20 commits remain unchanged and publicly reachable. They include
+frontend code, selected backend examples, and a former information preview.
+Deleting those files from the current tree does not prevent readers from
+opening them in older commits or existing copies.
+
+Accordingly, this update does not make previously published code confidential,
+revoke valid prior rights, or claim that source is absent from the entire Git
+repository. The seven update commits document a new publication boundary;
+they are not a retroactive removal of the previous publication.
+
+No other project repository or third-party rights are changed by this policy.
+See [provenance](docs/provenance.md) for the publication chronology and
+[verification limits](docs/quality/verification.md) for what was checked.
