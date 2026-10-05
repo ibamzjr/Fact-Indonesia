@@ -1,27 +1,31 @@
-# FACT Adaptation Roadmap
+# Portfolio Maintenance
 
-## Verified Information Preview
+This public repository is maintained as a visual case study, not an application
+development backlog. Updates must respect the
+[publication boundary](../SOURCE-CODE.md).
 
-The second publication batch implements these substantive increments:
+## Suitable Public Updates
 
-1. Separate FACT service contract and data validation.
-2. Reusable organization content and profile presentation.
-3. Independent preview entry and descriptive navigation.
-4. Searchable catalogue with explicit loading, error, and empty states.
-5. Shareable service detail and browser-history recovery.
-6. Native FAQ with reference/policy distinctions.
-7. Official contact actions without participant capture or payment.
-8. Reviewed source registry and taxonomy consistency checks.
-9. Automated import/publication checks and frontend build CI.
-10. Updated case study, run guide, and verification boundaries.
+- Owner-approved presentation images with accurate provenance and checksums.
+- Case-study refinements supported by visible outcomes rather than runtime claims.
+- Corrections to references, ownership notices, captions, and documentation links.
+- Publication reviews confirming that only approved documentation and images
+  are present in the current tree.
 
-## Remaining Production Work
+No application source, compiled preview, technical implementation walkthrough,
+private design source, credentials, or customer material should be added here.
 
-The preview is not a production learning platform. Any future runtime needs
-verified enrollment requirements, participant consent, authorization, secure
-storage, payment handling, and certificate rules. The inherited RoyalVilla
-backend samples are not a substitute for those controls.
+## Separate Private Work
 
-Additional accessibility audits, real-device performance testing, content-owner
-review, and a production media strategy are required before operational use.
-Keep future work substantive, independently verified, and dated when performed.
+Any authorized FE/BE development, testing, delivery, or source review belongs
+in a separately approved private workspace and agreement. This document does
+not claim that a private delivery has occurred or promise access to source.
+
+## Historical Limit
+
+The earlier 20 commits are retained at the owner's request. A future change to
+that decision would need a separate, explicit history-removal review. Normal
+portfolio updates do not make historical source inaccessible.
+
+Commit messages and dates must describe actual work. This maintenance policy
+does not schedule automatic pushes or authorize empty commits.

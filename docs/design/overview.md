@@ -1,23 +1,34 @@
-# Design Direction
+# Visual Direction
 
-The supplied FACT mockups establish a warm yellow identity, dark navigation
-accents, clear learning-oriented headings, and a photographic presentation.
-The home, catalogue, and recovery views form the visual case study.
+The three supplied mockups form the public design presentation. Their warm
+yellow accents, dark navigation details, photographic content, and clear
+headings establish a learning-oriented institutional identity.
 
-The imported React source still uses RoyalVilla's existing palette and property
-imagery. The standalone FACT preview uses white information surfaces, a warm
-yellow action accent, green institutional bands, and dark text. It is a new
-information presentation, not a recreation of the supplied laptop mockups.
-The owner image in the organization section is labelled as a portfolio concept.
+## Home
 
-Future adaptation should preserve legible typography, predictable navigation,
-stable media proportions, accessible controls, and usable mobile layouts.
-Animation should support orientation and stop when inactive; accessibility and
-reduced-motion checks belong to implementation verification.
+The home concept introduces the identity and sets a hierarchy between the
+main message, supporting information, and the next step. The laptop framing
+shows the intended presentation, not a verified live deployment.
 
-The preview uses fixed breakpoint typography, a two-column desktop catalogue
-and single-column mobile layout. Controls have labels, visible focus, stable
-dimensions, and native input/select/dialog/disclosure semantics. No canvas,
-carousel, shimmer loop, scroll hijacking, remote fonts, or animation library is
-initialized by the standalone entry. The concept image preserves its intrinsic
-aspect ratio and uses lazy loading; the original PNG remains unchanged.
+## Catalogue
+
+The catalogue concept demonstrates how repeated course content can be scanned
+and compared within a consistent visual system. Prices, ratings, and course
+labels are illustrative content inside the supplied image.
+
+## Recovery
+
+The recovery concept treats an unavailable destination as part of the visual
+experience, with a recognizable message and a clear return action. The image
+does not certify functional routing or keyboard behavior.
+
+## Presentation Integrity
+
+The original PNG copies are retained without recoloring, cropping, redrawing,
+or compression. [Asset provenance](../gallery.md#asset-provenance) records their
+names and [checksums](../../assets/manifest.json).
+
+This publication contains no CSS, components, fonts, animation code, or design
+source files. Responsive behavior, accessibility, motion, and performance
+cannot be established from static portfolio images. Those would require a
+separately authorized private implementation review.
