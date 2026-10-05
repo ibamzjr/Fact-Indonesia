@@ -30,13 +30,6 @@
 > bundles are not included. Any authorized implementation access or delivery
 > must be agreed separately in writing through a private channel.
 
-> [!WARNING]
-> **Earlier source remains in Git history.** At the owner's request, the
-> preceding 20 commits are preserved rather than rewritten. Their code is still
-> publicly accessible. This update does not make that material confidential,
-> remove existing copies, or retroactively revoke valid prior rights.
-> See the [publication boundary](SOURCE-CODE.md).
-
 ## Overview
 
 The portfolio explores an approachable learning-oriented identity through
