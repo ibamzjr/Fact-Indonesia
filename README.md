@@ -82,6 +82,7 @@ The three PNGs, including the hero above, remain unchanged. The
 ## Architecture
 
 The design places course discovery, account entry, and checkout in Next.js.
+Next.js communicates with Go through a **REST API**, using JSON over HTTP.
 Go owns validation, authorization, pricing, payment state, and course access;
 PostgreSQL holds the durable records. The numbered badges identify the
 [technology baseline](docs/architecture/overview.md#technology-baseline).
@@ -91,7 +92,7 @@ flowchart TB
     Visitor["Visitor"]
     Learner["Signed-in learner"]
     Web["Next.js 16.4.3<br/>Web experience"]
-    Contract["HTTP / JSON<br/>API contract"]
+    Contract["REST API<br/>HTTP / JSON"]
     Application["Go 1.27.3<br/>Application"]
     Database[("PostgreSQL 18.6")]
     Media[("Course media<br/>storage")]
@@ -111,7 +112,7 @@ flowchart TB
 | Layer | Intended role |
 | --- | --- |
 | **Next.js** | Public storytelling, course discovery, course detail, and account and checkout interfaces |
-| **Go** | Catalogue and identity boundaries, cart and voucher validation, enrollment and progress rules |
+| **Go** | REST API, catalogue and identity boundaries, cart and voucher validation, enrollment and progress rules |
 | **PostgreSQL** | Durable records for courses, accounts, orders, enrollment, and progress |
 
 Payment confirmation and certificate eligibility would be decided behind the

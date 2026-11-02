@@ -40,16 +40,17 @@ responsibilities. GitHub supplies the native rendering and viewer theme.
 
 ## 01 / Platform Map
 
-Next.js presents the experience. One modular Go application makes the business
-decisions through a defined HTTP contract, with PostgreSQL as its system of
-record. Storage and identity/payment integrations sit behind that application.
+Next.js presents the experience and consumes a **REST API** exposed by Go,
+using JSON over HTTP. One modular Go application owns the business decisions,
+with PostgreSQL as its system of record. Storage and identity/payment
+integrations sit behind that application.
 
 ```mermaid
 flowchart TB
     Visitor["Visitor"]
     Learner["Signed-in learner"]
     Web["Next.js 16.4.3<br/>Web experience"]
-    Contract["HTTP / JSON<br/>API contract"]
+    Contract["REST API<br/>HTTP / JSON"]
     Application["Go 1.27.3<br/>Application"]
     Database[("PostgreSQL 18.6")]
     Media[("Course media<br/>storage")]
@@ -76,6 +77,7 @@ learning scope. The prototype's payment overlay does not establish a provider.
 | Boundary | Responsibility | Ownership rule |
 | --- | --- | --- |
 | Next.js | Discovery, course detail, sign-in, cart action, checkout | Render server-provided price and access state |
+| Go REST API | Resource endpoints and JSON request/response contracts over HTTP | Enforce validation, authentication, and authorization before domain operations |
 | Go identity | Sessions and account context | Keep private identity data outside public catalogue responses |
 | Go catalogue | Search, filters, course details and preview references | Serve bounded, published course content |
 | Go commerce | Quotes, voucher eligibility, orders and payment reconciliation | Calculate totals and enforce stable idempotency keys |

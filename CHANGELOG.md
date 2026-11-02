@@ -12,6 +12,7 @@
 - Split the stack badge into individual Next.js, Go, and PostgreSQL design-target badges.
 - Set the badges and diagrams to the latest stable releases verified on 2 November 2026.
 - Replaced the source badge with an All rights reserved badge linked to the repository terms.
+- Identified the Next.js-to-Go interface as a REST API using JSON over HTTP.
 - Kept the three owner-supplied images and source-publication boundary intact.
 
 ## 2026-10-05 - Visual-Only Publication
