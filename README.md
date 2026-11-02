@@ -21,10 +21,10 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/publication-visual_showcase-20232A?style=flat-square" alt="Visual showcase publication" />
-  <img src="https://img.shields.io/badge/Next.js-proposed-111111?style=flat-square&logo=nextdotjs&logoColor=white" alt="Proposed Next.js" />
-  <img src="https://img.shields.io/badge/Go-proposed-00ADD8?style=flat-square&logo=go&logoColor=white" alt="Proposed Go" />
-  <img src="https://img.shields.io/badge/PostgreSQL-proposed-4169E1?style=flat-square&logo=postgresql&logoColor=white" alt="Proposed PostgreSQL" />
-  <img src="https://img.shields.io/badge/source-not_distributed-252231?style=flat-square" alt="Implementation source is not distributed here" />
+  <img src="https://img.shields.io/badge/Next.js-16-111111?style=flat-square&logo=nextdotjs&logoColor=white" alt="Next.js 16" />
+  <img src="https://img.shields.io/badge/Go-1.27-00ADD8?style=flat-square&logo=go&logoColor=white" alt="Go 1.27" />
+  <img src="https://img.shields.io/badge/PostgreSQL-18-4169E1?style=flat-square&logo=postgresql&logoColor=white" alt="PostgreSQL 18" />
+  <a href="LICENSE.md"><img src="https://img.shields.io/badge/rights-all_rights_reserved-252231?style=flat-square" alt="All rights reserved" /></a>
 </p>
 
 > [!IMPORTANT]
@@ -84,65 +84,10 @@ The three PNGs, including the hero above, remain unchanged. The
 A private implementation can keep the experience, business decisions, and
 durable records in distinct layers. The diagram below is a compact entrance
 to the [full platform map, payment sequence, learning path, and data model](docs/architecture/overview.md).
-It is a **design map**, not a deployed-system diagram.
+The numbered badges identify the selected [technology baseline](docs/architecture/overview.md#technology-baseline).
+The atlas is a **design blueprint** for the private implementation.
 
-```mermaid
-flowchart TB
-    Person["Visitor / learner"]:::actor
-
-    subgraph Web["NEXT.JS / EXPERIENCE"]
-        direction TB
-        Discover["Home / Catalogue / Course"]:::screen
-        Decide["Sign-in / Cart action / Checkout"]:::screen
-        Study["Learning / Certificates - proposed"]:::future
-    end
-
-    subgraph App["GO / BUSINESS BOUNDARIES"]
-        direction TB
-        API["API validation / authorization"]:::module
-        Identity["Identity"]:::module
-        Catalogue["Course discovery"]:::module
-        Commerce["Pricing / Orders"]:::module
-        Confirmed["Verified payment state"]:::module
-        Access["Entitlements"]:::module
-        Progress["Progress / Credentials - proposed"]:::future
-    end
-
-    DB[("PostgreSQL")]:::store
-    Preview[("Public preview assets")]:::store
-    Media[("Protected lesson media - proposed")]:::store
-    Pay["Payment provider - TBD"]:::external
-
-    Person --> Discover
-    Person --> Decide
-    Person -.-> Study
-    Discover --> API
-    Decide --> API
-    API --> Identity
-    API --> Catalogue
-    API --> Commerce
-    Commerce --> Pay
-    Pay -->|notification| API
-    API -->|verified paid order| Confirmed
-    Confirmed --> Access
-    Study -.-> Progress
-    Access -.-> Progress
-    Identity --> DB
-    Catalogue --> DB
-    Commerce --> DB
-    Confirmed --> DB
-    Access --> DB
-    Progress -.-> DB
-    Catalogue --> Preview
-    Progress -.-> Media
-
-    classDef actor fill:#1D1D1D,stroke:#F4B800,color:#FFFFFF,stroke-width:2px
-    classDef screen fill:#FFF5D4,stroke:#E3A100,color:#171717,stroke-width:2px
-    classDef module fill:#17212B,stroke:#F4B800,color:#FFFFFF,stroke-width:1px
-    classDef store fill:#123746,stroke:#72B5BE,color:#FFFFFF,stroke-width:2px
-    classDef external fill:#F3F3F3,stroke:#858585,color:#171717,stroke-width:1px
-    classDef future fill:#EAE5D9,stroke:#A89A78,color:#292929,stroke-width:1px
-```
+[![FACT Indonesia system atlas: Next.js experience, Go application, PostgreSQL and media, with verified payment before access](assets/architecture/system-atlas.svg)](docs/architecture/overview.md)
 
 | Layer | Intended role |
 | --- | --- |
@@ -160,7 +105,7 @@ explain the proposed boundaries and what the prototype does not show.
 
 | Included now | Not included in the current tree |
 | --- | --- |
-| Three owner-supplied showcase PNGs and their integrity manifest | Next.js pages, Go services, PostgreSQL schema, or application tests |
+| Three owner-supplied PNGs, four authored SVG architecture plates, and the PNG integrity manifest | Next.js pages, Go services, PostgreSQL schema, or application tests |
 | Product, visual, and architecture documentation | Runtime data, APIs, credentials, payment integrations, or course media |
 | Repository and ownership policies | Build tooling, deployable bundles, source maps, or a running application |
 

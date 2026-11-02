@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="920" viewBox="0 0 1600 920" role="img" aria-labelledby="title desc">
+<title id="title">FACT Indonesia future learning and certificate path</title><desc id="desc">Future conceptual learning design: signed-in learners need an active entitlement for protected lessons. The server persists progress, evaluates completion policy and may issue a certificate with a verification view. Public previews remain available without entitlement.</desc>
+<defs>
+  <linearGradient id="background" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#192125"/><stop offset=".6" stop-color="#101416"/><stop offset="1" stop-color="#151A1C"/></linearGradient>
+  <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M2 1 L8 5 L2 9" fill="none" stroke="#829398" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  <marker id="gold-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M2 1 L8 5 L2 9" fill="none" stroke="#EDC576" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker>
+</defs>
+<rect x="0" y="0" width="1600" height="920" rx="24" fill="url(#background)" stroke="none"/>
+<rect x="1" y="1" width="1598" height="918" rx="24" fill="none" stroke="#38464C"/>
+<path d="M71 57 L78 64 L71 71 L64 64Z" fill="#EDC576"/>
+<text x="92" y="72" fill="#F5F1E8" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" text-anchor="start" letter-spacing="2.4">FACT / INDONESIA</text>
+<text x="1536" y="72" fill="#B7C2C5" font-family="Consolas, monospace" font-size="18" font-weight="500" text-anchor="end" letter-spacing="1.6">SYSTEM ATLAS / 03</text>
+<text x="64" y="158" fill="#F5F1E8" font-family="Arial, Helvetica, sans-serif" font-size="62" font-weight="600" text-anchor="start" letter-spacing="-2.2">Progress, with meaning.</text>
+<text x="66" y="205" fill="#B7C2C5" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="400" text-anchor="start">A future learner journey governed by access and completion rules.</text>
+<path d="M64 246 H1536" fill="none" stroke="#38464C" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M64 246 H248" fill="none" stroke="#EDC576" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="64" y="272" width="216" height="32" rx="4" fill="#29261F" stroke="#38464C"/>
+<text x="76" y="294" fill="#EDC576" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="600" text-anchor="start" letter-spacing="1">FUTURE CAPABILITY</text>
+<rect x="64" y="332" width="1472" height="190" rx="14" fill="#171D20" stroke="#38464C"/>
+<text x="88" y="372" fill="#EDC576" font-family="Consolas, monospace" font-size="16" font-weight="400" text-anchor="start">01</text>
+<text x="88" y="414" fill="#F5F1E8" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="600" text-anchor="start" letter-spacing="-0.5">Signed-in learner</text>
+<text x="88" y="454" fill="#B7C2C5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" text-anchor="start">Session checked by Go</text>
+<path d="M393 405 H424" fill="none" stroke="#829398" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<text x="456" y="372" fill="#EDC576" font-family="Consolas, monospace" font-size="16" font-weight="400" text-anchor="start">02</text>
+<text x="456" y="414" fill="#F5F1E8" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="600" text-anchor="start" letter-spacing="-0.5">Active entitlement</text>
+<text x="456" y="454" fill="#B7C2C5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" text-anchor="start">Course access authorized</text>
+<path d="M761 405 H792" fill="none" stroke="#829398" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<text x="824" y="372" fill="#EDC576" font-family="Consolas, monospace" font-size="16" font-weight="400" text-anchor="start">03</text>
+<text x="824" y="414" fill="#F5F1E8" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="600" text-anchor="start" letter-spacing="-0.5">Protected lesson</text>
+<text x="824" y="454" fill="#B7C2C5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" text-anchor="start">Media access evaluated</text>
+<path d="M1129 405 H1160" fill="none" stroke="#829398" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<text x="1192" y="372" fill="#EDC576" font-family="Consolas, monospace" font-size="16" font-weight="400" text-anchor="start">04</text>
+<text x="1192" y="414" fill="#F5F1E8" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="600" text-anchor="start" letter-spacing="-0.5">Persist progress</text>
+<text x="1192" y="454" fill="#B7C2C5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" text-anchor="start">Server-owned completion</text>
+<path d="M600 522 V580" fill="none" stroke="#829398" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 7" marker-end="url(#arrow)"/>
+<rect x="400" y="580" width="400" height="112" rx="9" fill="#20282C" stroke="#38464C" stroke-dasharray="7 7"/>
+<text x="420" y="619" fill="#F5F1E8" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="600" text-anchor="start" letter-spacing="-0.6">Public preview / purchase</text>
+<text x="420" y="651" fill="#B7C2C5" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start">When access is not active</text>
+<path d="M1352 522 V580" fill="none" stroke="#EDC576" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#gold-arrow)"/>
+<rect x="872" y="580" width="640" height="112" rx="9" fill="#29261F" stroke="#EDC576"/>
+<text x="892" y="619" fill="#EDC576" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="600" text-anchor="start" letter-spacing="-0.6">Completion policy</text>
+<text x="892" y="651" fill="#B7C2C5" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start">Evaluate server-defined eligibility rules</text>
+<text x="892" y="678" fill="#B7C2C5" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start">Unmet criteria: continue learning</text>
+<rect x="1176" y="724" width="336" height="100" rx="9" fill="#20282C" stroke="#38464C" stroke-dasharray="7 7"/>
+<text x="1196" y="763" fill="#F5F1E8" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="600" text-anchor="start" letter-spacing="-0.6">Certificate record</text>
+<text x="1196" y="795" fill="#B7C2C5" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start">Issue + verification view</text>
+<path d="M1352 692 V724" fill="none" stroke="#EDC576" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#gold-arrow)"/>
+<text x="1372" y="715" fill="#EDC576" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" text-anchor="start">Met</text>
+<text x="88" y="772" fill="#F5F1E8" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="500" text-anchor="start">A certificate is an outcome of a defined policy.</text>
+<text x="88" y="806" fill="#B7C2C5" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start">Issuance, revocation and verification remain product decisions.</text>
+<path d="M64 836 H1536" fill="none" stroke="#38464C" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="64" y="864" fill="#B7C2C5" font-family="Consolas, monospace" font-size="15" font-weight="500" text-anchor="start" letter-spacing="1.2">FUTURE DESIGN / LEARNING SCREENS NOT SHOWN IN PROTOTYPE</text>
+<text x="1536" y="864" fill="#B7C2C5" font-family="Consolas, monospace" font-size="15" font-weight="500" text-anchor="end" letter-spacing="1.2">FACT INDONESIA / 2026</text>
+</svg>

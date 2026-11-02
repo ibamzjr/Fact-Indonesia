@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1280" viewBox="0 0 1600 1280" role="img" aria-labelledby="title desc">
+<title id="title">FACT Indonesia learning platform architecture</title><desc id="desc">A conceptual system atlas. Next.js experience connects through a Go API to identity, catalogue, orders and entitlements, with PostgreSQL records, public previews and future protected lessons. A separate payment path requires server verification before access. Dashed paths mark future capabilities.</desc>
+<defs>
+  <linearGradient id="background" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#192125"/><stop offset=".6" stop-color="#101416"/><stop offset="1" stop-color="#151A1C"/></linearGradient>
+  <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M2 1 L8 5 L2 9" fill="none" stroke="#829398" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  <marker id="gold-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M2 1 L8 5 L2 9" fill="none" stroke="#EDC576" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker>
+</defs>
+<rect x="0" y="0" width="1600" height="1280" rx="24" fill="url(#background)" stroke="none"/>
+<rect x="1" y="1" width="1598" height="1278" rx="24" fill="none" stroke="#38464C"/>
+<path d="M71 57 L78 64 L71 71 L64 64Z" fill="#EDC576"/>
+<text x="92" y="72" fill="#F5F1E8" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" text-anchor="start" letter-spacing="2.4">FACT / INDONESIA</text>
+<text x="1536" y="72" fill="#B7C2C5" font-family="Consolas, monospace" font-size="18" font-weight="500" text-anchor="end" letter-spacing="1.6">SYSTEM ATLAS / 01</text>
+<text x="64" y="158" fill="#F5F1E8" font-family="Arial, Helvetica, sans-serif" font-size="62" font-weight="600" text-anchor="start" letter-spacing="-2.2">Learning, connected.</text>
+<text x="66" y="205" fill="#B7C2C5" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="400" text-anchor="start">From first discovery to verified access — one coherent system.</text>
+<path d="M64 246 H1536" fill="none" stroke="#38464C" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M64 246 H248" fill="none" stroke="#EDC576" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="64" y="270" width="194" height="32" rx="4" fill="#29261F" stroke="#38464C"/>
+<text x="76" y="292" fill="#EDC576" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="600" text-anchor="start" letter-spacing="1">DESIGN BLUEPRINT</text>
+<text x="1536" y="292" fill="#B7C2C5" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="400" text-anchor="end">2 prototype flows / 11 reachable frames reviewed</text>
+<rect x="64" y="320" width="376" height="630" rx="14" fill="#171D20" stroke="#38464C"/>
+<rect x="472" y="320" width="656" height="630" rx="14" fill="#171D20" stroke="#38464C"/>
+<rect x="1160" y="320" width="376" height="630" rx="14" fill="#171D20" stroke="#38464C"/>
+<text x="88" y="354" fill="#EDC576" font-family="Consolas, monospace" font-size="17" font-weight="600" text-anchor="start" letter-spacing="1.6">01 / EXPERIENCE</text>
+<text x="88" y="397" fill="#F5F1E8" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="600" text-anchor="start" letter-spacing="-1">Next.js 16</text>
+<text x="88" y="425" fill="#B7C2C5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" text-anchor="start">Visitor &amp; signed-in learner</text>
+<text x="496" y="354" fill="#EDC576" font-family="Consolas, monospace" font-size="17" font-weight="600" text-anchor="start" letter-spacing="1.6">02 / APPLICATION</text>
+<text x="496" y="397" fill="#F5F1E8" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="600" text-anchor="start" letter-spacing="-1">Go 1.27</text>
+<text x="496" y="425" fill="#B7C2C5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" text-anchor="start">One modular application</text>
+<text x="1184" y="354" fill="#EDC576" font-family="Consolas, monospace" font-size="17" font-weight="600" text-anchor="start" letter-spacing="1.6">03 / DURABLE STATE</text>
+<text x="1184" y="397" fill="#F5F1E8" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="600" text-anchor="start" letter-spacing="-1">State &amp; media</text>
+<text x="1184" y="425" fill="#B7C2C5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" text-anchor="start">Separate records from assets</text>
+<rect x="88" y="448" width="328" height="108" rx="9" fill="#20282C" stroke="#38464C"/>
+<text x="108" y="487" fill="#F5F1E8" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="600" text-anchor="start" letter-spacing="-0.6">Discover</text>
+<text x="108" y="519" fill="#B7C2C5" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start">Home · catalogue · course</text>
+<rect x="88" y="588" width="328" height="108" rx="9" fill="#20282C" stroke="#38464C"/>
+<text x="108" y="627" fill="#F5F1E8" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="600" text-anchor="start" letter-spacing="-0.6">Decide</text>
+<text x="108" y="659" fill="#B7C2C5" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start">Sign-in · cart action · checkout</text>
+<rect x="88" y="728" width="328" height="108" rx="9" fill="#20282C" stroke="#38464C" stroke-dasharray="7 7"/>
+<text x="108" y="767" fill="#F5F1E8" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="600" text-anchor="start" letter-spacing="-0.6">Continue learning</text>
+<text x="108" y="799" fill="#B7C2C5" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start">Lessons · progress</text>
+<text x="108" y="826" fill="#B7C2C5" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start">Certificates</text>
+<text x="108" y="864" fill="#B7C2C5" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" text-anchor="start">Future learner experience</text>
+<rect x="496" y="448" width="608" height="68" rx="8" fill="#29261F" stroke="#EDC576"/>
+<text x="520" y="478" fill="#F5F1E8" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="600" text-anchor="start" letter-spacing="-0.4">HTTP boundary</text>
+<text x="520" y="503" fill="#B7C2C5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" text-anchor="start">Sessions · validation · authorization · idempotency</text>
+<rect x="496" y="550" width="288" height="126" rx="9" fill="#20282C" stroke="#38464C"/>
+<text x="516" y="589" fill="#F5F1E8" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="600" text-anchor="start" letter-spacing="-0.6">Identity</text>
+<text x="516" y="621" fill="#B7C2C5" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start">Accounts &amp; sessions</text>
+<text x="516" y="648" fill="#B7C2C5" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start">Private learner context</text>
+<rect x="816" y="550" width="288" height="126" rx="9" fill="#20282C" stroke="#38464C"/>
+<text x="836" y="589" fill="#F5F1E8" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="600" text-anchor="start" letter-spacing="-0.6">Catalogue</text>
+<text x="836" y="621" fill="#B7C2C5" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start">Search &amp; course details</text>
+<text x="836" y="648" fill="#B7C2C5" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start">Published course content</text>
+<rect x="496" y="708" width="288" height="126" rx="9" fill="#20282C" stroke="#38464C"/>
+<text x="516" y="747" fill="#F5F1E8" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="600" text-anchor="start" letter-spacing="-0.6">Commerce</text>
+<text x="516" y="779" fill="#B7C2C5" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start">Prices · vouchers · orders</text>
+<text x="516" y="806" fill="#B7C2C5" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start">Server-calculated totals</text>
+<rect x="816" y="708" width="288" height="126" rx="9" fill="#29261F" stroke="#EDC576"/>
+<text x="836" y="747" fill="#EDC576" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="600" text-anchor="start" letter-spacing="-0.6">Verified access</text>
+<text x="836" y="779" fill="#B7C2C5" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start">Verify paid order first</text>
+<text x="836" y="806" fill="#B7C2C5" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start">Then grant entitlements</text>
+<rect x="496" y="866" width="608" height="60" rx="8" fill="#20282C" stroke="#38464C" stroke-dasharray="7 7"/>
+<text x="520" y="894" fill="#F5F1E8" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="600" text-anchor="start" letter-spacing="-0.4">Learning &amp; publishing</text>
+<text x="520" y="916" fill="#B7C2C5" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="400" text-anchor="start">Lessons · progress · certificates · editorial — future</text>
+<rect x="1184" y="448" width="328" height="152" rx="9" fill="#20282C" stroke="#38464C"/>
+<text x="1204" y="487" fill="#F5F1E8" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="600" text-anchor="start" letter-spacing="-0.6">PostgreSQL 18</text>
+<text x="1204" y="519" fill="#B7C2C5" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start">Identity · catalogue · orders</text>
+<text x="1204" y="546" fill="#B7C2C5" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start">Entitlements · progress*</text>
+<rect x="1184" y="632" width="328" height="110" rx="9" fill="#20282C" stroke="#38464C"/>
+<text x="1204" y="671" fill="#F5F1E8" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="600" text-anchor="start" letter-spacing="-0.6">Public previews</text>
+<text x="1204" y="703" fill="#B7C2C5" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start">Artwork &amp; course teasers</text>
+<rect x="1184" y="774" width="328" height="110" rx="9" fill="#20282C" stroke="#38464C" stroke-dasharray="7 7"/>
+<text x="1204" y="813" fill="#F5F1E8" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="600" text-anchor="start" letter-spacing="-0.6">Protected lessons</text>
+<text x="1204" y="845" fill="#B7C2C5" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" text-anchor="start">Authorized media · future</text>
+<text x="1184" y="920" fill="#B7C2C5" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" text-anchor="start">* Progress belongs to the future scope.</text>
+<path d="M416 502 H456 V482 H496" fill="none" stroke="#829398" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M416 642 H456 V502" fill="none" stroke="#829398" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M416 782 H456 V896 H496" fill="none" stroke="#829398" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 7" marker-end="url(#arrow)"/>
+<path d="M800 516 V534 H640 V550" fill="none" stroke="#829398" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M800 534 H960 V550" fill="none" stroke="#829398" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M800 534 V771 H784" fill="none" stroke="#829398" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M800 771 H816" fill="none" stroke="#EDC576" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#gold-arrow)"/>
+<path d="M960 834 V866" fill="none" stroke="#829398" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 7" marker-end="url(#arrow)"/>
+<path d="M1104 482 H1144 V500 H1184" fill="none" stroke="#9CCCCC" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M1104 613 H1144 V687 H1184" fill="none" stroke="#829398" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M1104 771 H1144 V829 H1184" fill="none" stroke="#829398" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 7" marker-end="url(#arrow)"/>
+<text x="64" y="992" fill="#EDC576" font-family="Consolas, monospace" font-size="17" font-weight="600" text-anchor="start" letter-spacing="1.6">PAYMENT / THE TRUST PATH</text>
+<rect x="64" y="1012" width="1472" height="144" rx="14" fill="#171D20" stroke="#38464C"/>
+<text x="88" y="1047" fill="#EDC576" font-family="Consolas, monospace" font-size="16" font-weight="500" text-anchor="start" letter-spacing="1.2">01</text>
+<text x="88" y="1086" fill="#F5F1E8" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="600" text-anchor="start" letter-spacing="-0.5">Pending order</text>
+<text x="88" y="1120" fill="#B7C2C5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" text-anchor="start">Quote + stable request key</text>
+<path d="M388 1078 H424" fill="none" stroke="#829398" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<text x="456" y="1047" fill="#EDC576" font-family="Consolas, monospace" font-size="16" font-weight="500" text-anchor="start" letter-spacing="1.2">02</text>
+<text x="456" y="1086" fill="#F5F1E8" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="600" text-anchor="start" letter-spacing="-0.5">Payment provider</text>
+<text x="456" y="1120" fill="#B7C2C5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" text-anchor="start">Integration to be selected</text>
+<path d="M756 1078 H792" fill="none" stroke="#829398" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<text x="824" y="1047" fill="#EDC576" font-family="Consolas, monospace" font-size="16" font-weight="500" text-anchor="start" letter-spacing="1.2">03</text>
+<text x="824" y="1086" fill="#F5F1E8" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="600" text-anchor="start" letter-spacing="-0.5">Verify notification</text>
+<text x="824" y="1120" fill="#B7C2C5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" text-anchor="start">Signature · amount · replay</text>
+<path d="M1124 1078 H1160" fill="none" stroke="#EDC576" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#gold-arrow)"/>
+<text x="1192" y="1047" fill="#EDC576" font-family="Consolas, monospace" font-size="16" font-weight="500" text-anchor="start" letter-spacing="1.2">04</text>
+<text x="1192" y="1086" fill="#EDC576" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="600" text-anchor="start" letter-spacing="-0.5">Grant entitlement</text>
+<text x="1192" y="1120" fill="#B7C2C5" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" text-anchor="start">Atomic paid-state transaction</text>
+<path d="M64 1175 H106" fill="none" stroke="#829398" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<text x="118" y="1182" fill="#B7C2C5" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="400" text-anchor="start">Core design</text>
+<path d="M306 1175 H348" fill="none" stroke="#829398" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 7" marker-end="url(#arrow)"/>
+<text x="360" y="1182" fill="#B7C2C5" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="400" text-anchor="start">Future capability</text>
+<text x="1536" y="1182" fill="#B7C2C5" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="400" text-anchor="end">Technology versions = selected design baseline</text>
+<path d="M64 1196 H1536" fill="none" stroke="#38464C" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="64" y="1224" fill="#B7C2C5" font-family="Consolas, monospace" font-size="15" font-weight="500" text-anchor="start" letter-spacing="1.2">DESIGN BLUEPRINT / PRIVATE IMPLEMENTATION DIRECTION</text>
+<text x="1536" y="1224" fill="#B7C2C5" font-family="Consolas, monospace" font-size="15" font-weight="500" text-anchor="end" letter-spacing="1.2">FACT INDONESIA / 2026</text>
+</svg>

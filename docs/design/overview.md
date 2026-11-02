@@ -38,6 +38,15 @@ illustrative rather than a source of truth for the proposed system.
 The [architecture direction](../architecture/overview.md) maps the intended
 private responsibilities behind such a journey.
 
+## Architecture Plates
+
+Four static SVG diagrams carry the same ink, warm gold, and restrained teal
+palette into the system story: platform boundaries, purchase and access,
+learning progression, and data relationships. They are explanatory drawings,
+not screenshots of deployed services or source for a running application.
+The version labels Next.js 16, Go 1.27, and PostgreSQL 18 mark chosen design
+targets; they do not establish the version of any private implementation.
+
 ## Showcase Exports
 
 The three owner-supplied PNGs cover a home composition, catalogue concept,
@@ -46,6 +55,6 @@ cropping, redrawing, or compression. [Asset provenance](../gallery.md#asset-prov
 records their names and the [manifest](../../assets/manifest.json) records
 checksums.
 
-This publication contains no CSS, components, fonts, animation code, or design
-source files. Static exports cannot establish responsive behavior, accessibility,
-motion quality, or runtime performance.
+This publication contains no CSS, components, fonts, animation code, or
+application design source files. Static exports and diagrams cannot establish
+responsive behavior, accessibility, motion quality, or runtime performance.

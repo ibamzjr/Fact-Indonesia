@@ -34,5 +34,12 @@
 !/assets/fact-indonesia-catalogue.png
 !/assets/fact-indonesia-recovery.png
 !/assets/manifest.json
+!/assets/architecture/
+
+/assets/architecture/*
+!/assets/architecture/system-atlas.svg
+!/assets/architecture/payment-flow.svg
+!/assets/architecture/learning-path.svg
+!/assets/architecture/data-model.svg
 
 # Git ignores do not affect existing history or files staged with --force.

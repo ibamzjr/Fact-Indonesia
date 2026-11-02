@@ -8,6 +8,7 @@ distribution. Frontend and backend implementation are not included.**
 | Public Material | Purpose |
 | --- | --- |
 | Three owner-supplied PNGs | Selected visual outcomes for showcase review |
+| Four authored SVG diagrams | Conceptual architecture, not application source or deployment evidence |
 | Asset manifest | Original filenames, sizes, and integrity checksums |
 | Markdown documentation | Case study, conceptual architecture, provenance, and publication policies |
 | Git/editor metadata | Text formatting and an explicit presentation-file allowlist |
@@ -16,6 +17,10 @@ The current tree does not include FE/BE source, components, templates, styles,
 runtime data, fonts, dependency manifests, build configuration, tests,
 application CI, compiled bundles, source maps, APIs, databases, credentials,
 or deployment files. There is no local application setup or build command.
+
+The static SVG diagrams are presentation assets. The set's Next.js 16,
+Go 1.27, and PostgreSQL 18 labels identify selected design targets, not versions
+verified in a private build or on the official FACT website.
 
 The permitted paths are listed in [.gitignore](.gitignore). A Git ignore list
 helps prevent accidental additions; it is not access control, does not block

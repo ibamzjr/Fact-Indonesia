@@ -31,91 +31,29 @@ issuance, content editor, or verified payment callback. The payment overlay's
 amount differs from the checkout total, so neither is a valid source of truth
 for an actual order. Provider branding in that overlay is illustrative.
 
+## Technology Baseline
+
+The numeric badges identify the selected release families for this architecture:
+**Next.js 16**, **Go 1.27**, and **PostgreSQL 18**. They are design targets;
+exact private application versions require its dependency and deployment records.
+Official release references are recorded in [sources](../sources.md#technology-version-references).
+
+The four vector plates share one visual system: charcoal, ivory, restrained gold,
+fixed typography, and dedicated connector lanes. They are self-contained SVGs
+with no scripts, embedded application code, or external fonts. Open a plate
+to inspect its details at full size.
+
 ## 01 / Platform Map
 
 The main design is a **modular Go application**, with one clear API boundary
 and PostgreSQL as the system of record. It does not need separate microservices
 or a search cluster merely because the product has many course cards.
 
-```mermaid
-flowchart LR
-    Visitor["Visitor"]:::actor
-    Learner["Learner"]:::actor
-    Editor["Course editor - proposed"]:::future
+[![System atlas: Next.js experience, Go business boundaries, PostgreSQL, public previews and future protected media](../../assets/architecture/system-atlas.svg)](../../assets/architecture/system-atlas.svg)
 
-    subgraph Web["01 / NEXT.JS EXPERIENCE - PROPOSED STACK"]
-        direction TB
-        Public["Home / About / Catalogue / Detail / 404"]:::screen
-        Purchase["Sign-in / Cart action / Checkout"]:::screen
-        StudyUI["Learning / Certificates - proposed"]:::future
-        Studio["Editorial console - proposed"]:::future
-    end
-
-    subgraph App["02 / GO MODULAR APPLICATION - PROPOSED"]
-        direction TB
-        API["HTTP boundary / validation / authorization"]:::core
-        Identity["Identity and sessions"]:::module
-        Catalogue["Catalogue and discovery"]:::module
-        Commerce["Pricing / vouchers / cart"]:::module
-        Orders["Orders and payment state"]:::module
-        Confirmed["Verified payment state"]:::core
-        Access["Enrollment and entitlement"]:::module
-        Learning["Lessons / progress / credentials - proposed"]:::future
-        Editorial["Course publishing - proposed"]:::future
-
-        API --> Identity
-        API --> Catalogue
-        API --> Commerce
-        Commerce --> Orders
-        Access -.-> Learning
-        API -.-> Editorial
-    end
-
-    subgraph State["03 / DURABLE STATE AND OUTSIDE SYSTEMS"]
-        direction TB
-        DB[("PostgreSQL - system of record")]:::store
-        Preview[("Public preview assets")]:::store
-        Media[("Protected lesson media - proposed")]:::store
-        Gateway["Payment provider - undecided"]:::external
-        Google["Google sign-in - optional"]:::external
-    end
-
-    Visitor --> Public
-    Learner --> Purchase
-    Learner -.-> StudyUI
-    Editor -.-> Studio
-    Public --> API
-    Purchase --> API
-    StudyUI -.-> API
-    Studio -.-> API
-    Orders --> Gateway
-    Gateway -->|notification| API
-    API -->|verified paid order| Confirmed
-    Confirmed --> Access
-    Identity --> DB
-    Catalogue --> DB
-    Orders --> DB
-    Confirmed --> DB
-    Access --> DB
-    Learning -.-> DB
-    Editorial -.-> DB
-    Catalogue --> Preview
-    Learning -.-> Media
-    Identity -.-> Google
-
-    classDef actor fill:#1D1D1D,stroke:#F4B800,color:#FFFFFF,stroke-width:2px
-    classDef screen fill:#FFF5D4,stroke:#E3A100,color:#171717,stroke-width:2px
-    classDef core fill:#17212B,stroke:#F4B800,color:#FFFFFF,stroke-width:2px
-    classDef module fill:#FFFFFF,stroke:#B7902D,color:#171717,stroke-width:1px
-    classDef store fill:#123746,stroke:#72B5BE,color:#FFFFFF,stroke-width:2px
-    classDef external fill:#F3F3F3,stroke:#858585,color:#171717,stroke-width:1px
-    classDef future fill:#EAE5D9,stroke:#A89A78,color:#292929,stroke-width:1px
-```
-
-Solid connections map the core experience and its necessary responsibilities.
-Dashed connections are future-facing capabilities or integrations whose full
-journey is not shown. The technology labels describe the owner's chosen
-direction, not the implementation of the official website.
+Solid connections show the primary design path. Dashed connections mark
+future learning capabilities. The gold access gate verifies paid state before
+granting entitlements; the lower ribbon expands that trust path.
 
 | Boundary | Responsibility | Data or trust rule |
 | --- | --- | --- |
@@ -133,33 +71,11 @@ The checkout and payment overlay motivate this sequence; they do not prove
 that any payment integration exists. In particular, the browser returning
 from a payment window cannot unlock a course by itself.
 
-```mermaid
-sequenceDiagram
-    autonumber
-    actor Learner
-    participant Web as Next.js checkout
-    participant API as Go API
-    participant DB as PostgreSQL
-    participant Pay as Payment provider TBD
+[![Purchase sequence: server-calculated quote, pending order, payment handoff, verified notification and atomic entitlement grant](../../assets/architecture/payment-flow.svg)](../../assets/architecture/payment-flow.svg)
 
-    Learner->>Web: Select course and voucher
-    Web->>API: Request server-calculated quote
-    API->>DB: Read published price and voucher rules
-    DB-->>API: Eligible price and discount
-    API-->>Web: Quote and expiry
-    Learner->>Web: Confirm purchase
-    Web->>API: Create order with stable idempotency key
-    API->>DB: Persist pending order and request fingerprint
-    API->>Pay: Create payment intent for order ID
-    Pay-->>API: Provider reference or checkout URL
-    API-->>Web: Pending order and payment instruction
-    Web-->>Learner: Present payment choice
-    Pay-->>API: Authenticated payment notification
-    API->>DB: Atomically mark paid and grant entitlement
-    Web->>API: Read authoritative order status
-    API-->>Web: Paid, pending, or failed state
-    Note over Web,API: A browser redirect or success screen is not payment proof.
-```
+The sequence reads from top to bottom: calculate a quote, persist a pending
+order, request payment, verify the provider notification, then atomically
+record payment and access. The interface reads the authoritative state.
 
 The design must reject a reused idempotency key with a different order body,
 handle repeated or delayed payment notifications, and retain an unknown state
@@ -173,26 +89,11 @@ This is **future platform architecture**, not a flow demonstrated by the
 prototype. The visible course preview and certificate navigation establish
 product intent only.
 
-```mermaid
-flowchart LR
-    Signed["Signed-in learner"]:::actor --> Gate{"Active entitlement?"}:::decision
-    Gate -- No --> Preview["Public preview or purchase"]:::screen
-    Gate -- Yes --> Lesson["Authorized lesson media"]:::store
-    Lesson --> Progress["Persist lesson completion"]:::core
-    Progress --> Policy{"Completion policy met?"}:::decision
-    Policy -- No --> Continue["Continue learning"]:::screen
-    Continue --> Lesson
-    Policy -- Yes --> Issue["Issue certificate record"]:::gold
-    Issue --> Verify["Verification view - proposed"]:::future
+[![Future learning path: active entitlement, authorized lesson, progress, completion policy and certificate eligibility](../../assets/architecture/learning-path.svg)](../../assets/architecture/learning-path.svg)
 
-    classDef actor fill:#1D1D1D,stroke:#F4B800,color:#FFFFFF,stroke-width:2px
-    classDef decision fill:#FFF5D4,stroke:#E3A100,color:#171717,stroke-width:2px
-    classDef screen fill:#FFFFFF,stroke:#B7902D,color:#171717,stroke-width:1px
-    classDef core fill:#17212B,stroke:#F4B800,color:#FFFFFF,stroke-width:2px
-    classDef store fill:#123746,stroke:#72B5BE,color:#FFFFFF,stroke-width:2px
-    classDef gold fill:#F4B800,stroke:#171717,color:#171717,stroke-width:2px
-    classDef future fill:#EAE5D9,stroke:#A89A78,color:#292929,stroke-width:1px
-```
+Without an active entitlement, the learner returns to a public preview or
+purchase. With access, the server records progress and evaluates completion;
+unmet criteria continue learning, while met criteria may produce a certificate.
 
 The server would own progress and eligibility rules. Course playback, lesson
 completion, certificate generation, and public verification need separate
@@ -200,22 +101,21 @@ product decisions and evidence before they can be called implemented.
 
 ## 04 / Conceptual Data Relationships
 
-This ER model makes the domain boundaries reviewable. Entity names and
-cardinalities are **proposed**, not a published PostgreSQL schema.
+This map selects the domain's principal relationships. Entity names and
+cardinalities are **proposed**; a complete schema also needs purchase provenance,
+constraints, and lifecycle records. The payment plate explains how a paid order
+grants access.
 
-```mermaid
-erDiagram
-    ACCOUNT ||--o{ ORDER : places
-    ORDER ||--|{ ORDER_ITEM : contains
-    COURSE ||--o{ ORDER_ITEM : purchased_as
-    VOUCHER o|--o{ ORDER : discounts
-    ACCOUNT ||--o{ ENTITLEMENT : holds
-    COURSE ||--o{ ENTITLEMENT : unlocks
-    COURSE ||--o{ LESSON : contains
-    ENTITLEMENT ||--o{ LESSON_PROGRESS : records
-    LESSON ||--o{ LESSON_PROGRESS : measures
-    ENTITLEMENT ||--o| CERTIFICATE : may_earn
-```
+[![Conceptual data relationships among accounts, orders, items, courses, vouchers, entitlements, lessons, progress and certificates](../../assets/architecture/data-model.svg)](../../assets/architecture/data-model.svg)
+
+| Relationship | Intended cardinality |
+| --- | --- |
+| Account to order; order to order item; course to order item | One to many |
+| Voucher on an order | Zero or one voucher |
+| Account and course to entitlement | Each can have many entitlements |
+| Course to lesson | One to many |
+| Entitlement and lesson to progress | Each can have many progress records |
+| Entitlement to certificate | Zero or one certificate |
 
 The owner still needs to decide how multi-course orders, refunds, certificate
 revocation, course versioning, instructor permissions, and media retention
