@@ -20,11 +20,16 @@ profile requests could not be retrieved; an indexed homepage supported the
 existing organization and service-category context, without verifying all
 current live details.
 
-The linked Figma prototype was inspected on 2 November 2026 to identify its
-visible journey and visual cues. A prototype is design evidence, not proof of
-working transactions or implementation technology. Next.js, Go, and PostgreSQL
-are documented as the [private architecture direction](architecture/overview.md),
-not a verified public runtime.
+The linked Figma prototype was inspected on 2 November 2026 through both
+named flows: six reachable frames in Flow 1 and five in Flow 2. These include
+public and signed-in variants, checkout, and a payment-selection overlay.
+This review covers the reachable prototype frames, not detached artboards in
+the source design file. The overlay amount differs from the checkout summary;
+its branding and prices are not treated as verified payment facts. A prototype
+is design evidence, not proof of working transactions or implementation
+technology. Next.js, Go, and PostgreSQL are documented as the
+[private architecture direction](architecture/overview.md), not a verified
+public runtime.
 
 The showcase does not publish current participant totals, team membership,
 schedules, fees, or course availability as maintained project data. Visitors

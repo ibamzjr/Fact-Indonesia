@@ -27,10 +27,14 @@ review of typography, contrast, motion, and keyboard behavior.
 | Course detail | Large media preview beside summary, price and actions | Make the decision context visible together |
 | Account entry | Focused sign-in surface and restrained gold highlights | Keep the transition to a personal journey clear |
 | Cart and voucher | Grouped purchase details and voucher entry | Make the next step understandable before checkout |
+| Checkout | Buyer fields, payment choices, discount and total summary | Keep the purchase decision legible |
+| Payment overlay | A separate method-selection surface | Show the handoff, without treating the mockup as a verified transaction |
 | Recovery | A recognizable unavailable state with a return action | Help people regain their place |
 
 The certificate item appears as a navigation destination in the prototype;
 certificate issuance and verification are not established by these screens.
+The payment overlay and checkout show different amounts, so their prices are
+illustrative rather than a source of truth for the proposed system.
 The [architecture direction](../architecture/overview.md) maps the intended
 private responsibilities behind such a journey.
 

@@ -16,8 +16,9 @@ support.
 ## Experience Scope
 
 The [prototype](https://www.figma.com/proto/DaUF428JV28rilJxGucJUO?node-id=0-1)
-shows a home, course discovery, course detail, account entry, and cart/voucher
-touchpoints. The three [showcase exports](../gallery.md) present selected home,
+has two reachable flows spanning home, course discovery, detail, sign-in,
+about, recovery, checkout, a payment-selection overlay, and signed-in
+variants. The three [showcase exports](../gallery.md) present selected home,
 catalogue, and recovery compositions. These references establish a design
 direction. They do not prove a production course database, live availability,
 enrollment, payment, learner progress, or certificates.

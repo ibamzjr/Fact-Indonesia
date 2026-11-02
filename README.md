@@ -21,7 +21,9 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/publication-visual_showcase-20232A?style=flat-square" alt="Visual showcase publication" />
-  <img src="https://img.shields.io/badge/architecture-Next.js_%2B_Go_%2B_PostgreSQL-E7B828?style=flat-square" alt="Proposed Next.js, Go, and PostgreSQL architecture" />
+  <img src="https://img.shields.io/badge/Next.js-proposed-111111?style=flat-square&logo=nextdotjs&logoColor=white" alt="Proposed Next.js" />
+  <img src="https://img.shields.io/badge/Go-proposed-00ADD8?style=flat-square&logo=go&logoColor=white" alt="Proposed Go" />
+  <img src="https://img.shields.io/badge/PostgreSQL-proposed-4169E1?style=flat-square&logo=postgresql&logoColor=white" alt="Proposed PostgreSQL" />
   <img src="https://img.shields.io/badge/source-not_distributed-252231?style=flat-square" alt="Implementation source is not distributed here" />
 </p>
 
@@ -35,11 +37,13 @@
 ## The Experience
 
 The concept gives learners a clear route from first impression to a course
-decision. The [experience prototype](https://www.figma.com/proto/DaUF428JV28rilJxGucJUO?node-id=0-1)
-shows a bold home, a course catalogue, a detailed course view, account entry,
-and cart and voucher touchpoints. Black, warm gold, and generous white space
-give the journey its distinctive rhythm. The three images in this showcase are
-separate owner-supplied exports; they are not screenshots of a working service.
+decision. The prototype review covered **both reachable flows, 11 frames in total**:
+home, catalogue, course detail, sign-in, about, recovery, checkout, payment
+selection, and signed-in variants. The
+[experience prototype](https://www.figma.com/proto/DaUF428JV28rilJxGucJUO?node-id=0-1)
+uses black, warm gold, and generous white space to give the journey its
+distinctive rhythm. The three images in this showcase are separate
+owner-supplied exports, not screenshots of a working service.
 
 | Moment | Design intention |
 | --- | --- |
@@ -78,17 +82,66 @@ The three PNGs, including the hero above, remain unchanged. The
 ## Architecture Direction
 
 A private implementation can keep the experience, business decisions, and
-durable records in distinct layers. The compact diagram maps the learner to
-the interface, service, and data boundaries suggested by the FACT prototype.
+durable records in distinct layers. The diagram below is a compact entrance
+to the [full platform map, payment sequence, learning path, and data model](docs/architecture/overview.md).
 It is a **design map**, not a deployed-system diagram.
 
 ```mermaid
 flowchart TB
-    Learner[Visitor or learner] --> Web[Next.js experience]
-    Web --> API[Go application API]
-    API --> Data[(PostgreSQL)]
-    API --> Media[(Private course media)]
-    API --> Payment[Payment provider to be selected]
+    Person["Visitor / learner"]:::actor
+
+    subgraph Web["NEXT.JS / EXPERIENCE"]
+        direction TB
+        Discover["Home / Catalogue / Course"]:::screen
+        Decide["Sign-in / Cart action / Checkout"]:::screen
+        Study["Learning / Certificates - proposed"]:::future
+    end
+
+    subgraph App["GO / BUSINESS BOUNDARIES"]
+        direction TB
+        API["API validation / authorization"]:::module
+        Identity["Identity"]:::module
+        Catalogue["Course discovery"]:::module
+        Commerce["Pricing / Orders"]:::module
+        Confirmed["Verified payment state"]:::module
+        Access["Entitlements"]:::module
+        Progress["Progress / Credentials - proposed"]:::future
+    end
+
+    DB[("PostgreSQL")]:::store
+    Preview[("Public preview assets")]:::store
+    Media[("Protected lesson media - proposed")]:::store
+    Pay["Payment provider - TBD"]:::external
+
+    Person --> Discover
+    Person --> Decide
+    Person -.-> Study
+    Discover --> API
+    Decide --> API
+    API --> Identity
+    API --> Catalogue
+    API --> Commerce
+    Commerce --> Pay
+    Pay -->|notification| API
+    API -->|verified paid order| Confirmed
+    Confirmed --> Access
+    Study -.-> Progress
+    Access -.-> Progress
+    Identity --> DB
+    Catalogue --> DB
+    Commerce --> DB
+    Confirmed --> DB
+    Access --> DB
+    Progress -.-> DB
+    Catalogue --> Preview
+    Progress -.-> Media
+
+    classDef actor fill:#1D1D1D,stroke:#F4B800,color:#FFFFFF,stroke-width:2px
+    classDef screen fill:#FFF5D4,stroke:#E3A100,color:#171717,stroke-width:2px
+    classDef module fill:#17212B,stroke:#F4B800,color:#FFFFFF,stroke-width:1px
+    classDef store fill:#123746,stroke:#72B5BE,color:#FFFFFF,stroke-width:2px
+    classDef external fill:#F3F3F3,stroke:#858585,color:#171717,stroke-width:1px
+    classDef future fill:#EAE5D9,stroke:#A89A78,color:#292929,stroke-width:1px
 ```
 
 | Layer | Intended role |
@@ -100,8 +153,8 @@ flowchart TB
 Payment confirmation and certificate eligibility would be decided behind the
 API, never inferred from a browser screen. Media access would follow verified
 enrollment. The exact schema, payment provider, hosting, and certificate policy
-are still private design decisions. See the [architecture notes](docs/architecture/overview.md)
-for the journey and responsibility boundaries.
+remain private design decisions. The [architecture notes](docs/architecture/overview.md)
+explain the proposed boundaries and what the prototype does not show.
 
 ## Publication Boundary
 

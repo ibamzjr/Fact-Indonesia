@@ -14,6 +14,7 @@ The showcase publication is reviewed for the following properties:
 | Withdrawn implementation | No FE/BE directories, package files, build tooling, app tests, or generated bundles in the current tree |
 | Documentation links | Relative Markdown and embedded image/link targets resolve within the approved tree |
 | Conceptual architecture | The Next.js, Go, and PostgreSQL diagram is labelled as a design direction, not a verified deployed stack |
+| Prototype coverage | Two named flows and 11 reachable frames reviewed; detached Figma artboards and runtime behavior are not certified |
 | Image integrity | Original byte sizes and SHA-256 values agree with the unchanged manifest |
 | Image payload review | Retained PNGs have no text/source metadata chunks or trailing payloads |
 | Staged content | No credential signatures, private implementation snippets, or current runnable-preview claims |

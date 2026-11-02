@@ -6,6 +6,10 @@
 - Documented an illustrative Next.js, Go, and PostgreSQL architecture. The
   diagram describes a design direction, not a verified build or the official
   website's implementation.
+- Reviewed both reachable Figma flows and expanded the architecture into a
+  platform map, purchase and entitlement sequence, learning path, and
+  conceptual data relationships.
+- Split the stack badge into individual Next.js, Go, and PostgreSQL badges.
 - Kept the three owner-supplied images and source-publication boundary intact.
 
 ## 2026-10-05 - Visual-Only Publication
