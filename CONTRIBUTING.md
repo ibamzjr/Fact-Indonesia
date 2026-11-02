@@ -28,7 +28,7 @@ private channel and agreement, not this repository.
 
 There is no npm installation, application test, or frontend/backend build
 step in the current version. See [verification](docs/quality/verification.md)
-for the portfolio-specific review and its limits.
+for the showcase publication review and its limits.
 
 Only update the asset manifest when an intentional owner-approved image change
 is made. Do not replace supplied images merely to satisfy an integrity check.

@@ -1,29 +1,36 @@
 # Content References
 
-This page separates external business references from owner-supplied portfolio
-visuals. References are not a grant to reproduce the official site's source,
-identity, or other third-party material.
+This page separates external organization references, the supplied experience
+prototype, and owner-supplied showcase images. Referencing them does not grant
+rights to reproduce third-party source or identity material.
 
 | Reference | Use |
 | --- | --- |
 | [FACT Indonesia](https://fact-indonesia.com/) | Official organization destination and service-category context |
 | [About FACT Indonesia](https://fact-indonesia.com/profile/) | Organization profile reference |
+| [FACT experience prototype](https://www.figma.com/proto/DaUF428JV28rilJxGucJUO?node-id=0-1) | Observed home, catalogue, course detail, account, cart/voucher, and navigation direction; access may depend on Figma permissions |
 | [GitHub Terms of Service](https://docs.github.com/en/site-policy/github-terms/github-terms-of-service#d-user-generated-content) | Public-hosting and platform-rights qualification |
 | [GitHub history-removal guidance](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/removing-sensitive-data-from-a-repository) | Distinction between current-file deletion and historical removal |
 
 ## Reference Review
 
 Business references were initially reviewed on 28 September 2026 and revisited
-on 2 October 2026. For the portfolio update on 5 October 2026, direct homepage
-and profile requests could not be retrieved. An indexed copy of the official
-homepage supported the existing organization and service-category context;
-it is not treated as a fresh verification of all live content.
+on 2 October 2026. During the 5 October showcase update, direct homepage and
+profile requests could not be retrieved; an indexed homepage supported the
+existing organization and service-category context, without verifying all
+current live details.
 
-The portfolio deliberately does not publish current participant totals, team
-membership, schedules, fees, or course availability as maintained project data.
-Visitors should confirm those details through official channels.
+The linked Figma prototype was inspected on 2 November 2026 to identify its
+visible journey and visual cues. A prototype is design evidence, not proof of
+working transactions or implementation technology. Next.js, Go, and PostgreSQL
+are documented as the [private architecture direction](architecture/overview.md),
+not a verified public runtime.
 
-## Portfolio Evidence
+The showcase does not publish current participant totals, team membership,
+schedules, fees, or course availability as maintained project data. Visitors
+should confirm those details through official channels.
+
+## Showcase Evidence
 
 The [visual gallery](gallery.md) and [asset manifest](../assets/manifest.json)
 identify the owner-supplied mockups. They establish image provenance, not

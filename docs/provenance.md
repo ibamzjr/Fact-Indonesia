@@ -3,7 +3,7 @@
 ## Current Materials
 
 The current public tree contains three owner-supplied PNG exports, their asset
-manifest, and portfolio documentation. The images were supplied from the
+manifest, and showcase documentation. The images were supplied from the
 owner's Royalvilla asset folder and retained without alteration. The
 [gallery](gallery.md) records their original and published filenames.
 
@@ -22,13 +22,13 @@ The next ten commits added an independent FACT information preview, contracts,
 and build verification. These earlier files remained separate from the
 supplied visual mockups and did not implement a production learning platform.
 
-## Portfolio-Only Update
+## Visual-Only Update
 
 On 5 October 2026, the owner requested removal of FE/BE from the current tree
 while keeping this repository public. The owner also explicitly requested a
 normal update, without deleting or rewriting the previous history.
 
-Seven non-empty update commits therefore replace the current source-facing
+Seven non-empty update commits therefore replaced the source-facing
 publication with a visual-only showcase. The preceding 20 commits remain
 unchanged and reachable, including their source files. No claim of historical
 source confidentiality is made.

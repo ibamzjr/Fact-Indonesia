@@ -1,15 +1,15 @@
 # Implementation And Publication Policy
 
-**The current version is a public portfolio, not an application source
+**The current version is a public showcase, not an application source
 distribution. Frontend and backend implementation are not included.**
 
 ## Current Publication Boundary
 
 | Public Material | Purpose |
 | --- | --- |
-| Three owner-supplied PNGs | Selected visual outcomes for portfolio evaluation |
+| Three owner-supplied PNGs | Selected visual outcomes for showcase review |
 | Asset manifest | Original filenames, sizes, and integrity checksums |
-| Markdown documentation | Case study, image provenance, and publication policies |
+| Markdown documentation | Case study, conceptual architecture, provenance, and publication policies |
 | Git/editor metadata | Text formatting and an explicit presentation-file allowlist |
 
 The current tree does not include FE/BE source, components, templates, styles,
@@ -37,7 +37,7 @@ frontend code, selected backend examples, and a former information preview.
 Deleting those files from the current tree does not prevent readers from
 opening them in older commits or existing copies.
 
-Accordingly, this update does not make previously published code confidential,
+Accordingly, the October 2026 update did not make previously published code confidential,
 revoke valid prior rights, or claim that source is absent from the entire Git
 repository. The seven update commits document a new publication boundary;
 they are not a retroactive removal of the previous publication.

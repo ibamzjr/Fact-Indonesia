@@ -1,4 +1,4 @@
-# Portfolio Maintenance
+# Showcase Maintenance
 
 This public repository is maintained as a visual case study, not an application
 development backlog. Updates must respect the
@@ -25,7 +25,7 @@ not claim that a private delivery has occurred or promise access to source.
 
 The earlier 20 commits are retained at the owner's request. A future change to
 that decision would need a separate, explicit history-removal review. Normal
-portfolio updates do not make historical source inaccessible.
+showcase updates do not make historical source inaccessible.
 
 Commit messages and dates must describe actual work. This maintenance policy
 does not schedule automatic pushes or authorize empty commits.

@@ -1,34 +1,47 @@
 # Visual Direction
 
-The three supplied mockups form the public design presentation. Their warm
-yellow accents, dark navigation details, photographic content, and clear
-headings establish a learning-oriented institutional identity.
+The [FACT experience prototype](https://www.figma.com/proto/DaUF428JV28rilJxGucJUO?node-id=0-1)
+and the three unchanged showcase exports inform this direction. They are
+presentation references, not evidence of working interaction or production
+design-system implementation.
 
-## Home
+## Visual Language
 
-The home concept introduces the identity and sets a hierarchy between the
-main message, supporting information, and the next step. The laptop framing
-shows the intended presentation, not a verified live deployment.
+The prototype moves between white space, near-black surfaces, and warm gold
+accents. Dark, rounded navigation and decisive calls to action establish a
+confident first impression. A mix of bold sans-serif headings and selective
+italic serif emphasis makes the learning message memorable without hiding the
+next action. Course photography, compact ratings, and disciplined card spacing
+keep discovery approachable.
 
-## Catalogue
+These are observed cues, not a claim of exact design tokens, licensed typefaces,
+or responsive specifications. The private implementation would need a separate
+review of typography, contrast, motion, and keyboard behavior.
 
-The catalogue concept demonstrates how repeated course content can be scanned
-and compared within a consistent visual system. Prices, ratings, and course
-labels are illustrative content inside the supplied image.
+## Experience Cues
 
-## Recovery
+| Prototype area | Presentation cue | Intended effect |
+| --- | --- | --- |
+| Home | Clear learning promise, direct catalogue action, black-and-gold navigation | Give visitors a confident entry point |
+| Catalogue | Warm heading area, search and filters, repeated course cards | Reduce effort when comparing options |
+| Course detail | Large media preview beside summary, price and actions | Make the decision context visible together |
+| Account entry | Focused sign-in surface and restrained gold highlights | Keep the transition to a personal journey clear |
+| Cart and voucher | Grouped purchase details and voucher entry | Make the next step understandable before checkout |
+| Recovery | A recognizable unavailable state with a return action | Help people regain their place |
 
-The recovery concept treats an unavailable destination as part of the visual
-experience, with a recognizable message and a clear return action. The image
-does not certify functional routing or keyboard behavior.
+The certificate item appears as a navigation destination in the prototype;
+certificate issuance and verification are not established by these screens.
+The [architecture direction](../architecture/overview.md) maps the intended
+private responsibilities behind such a journey.
 
-## Presentation Integrity
+## Showcase Exports
 
-The original PNG copies are retained without recoloring, cropping, redrawing,
-or compression. [Asset provenance](../gallery.md#asset-provenance) records their
-names and [checksums](../../assets/manifest.json).
+The three owner-supplied PNGs cover a home composition, catalogue concept,
+and recovery concept. The original copies are retained without recoloring,
+cropping, redrawing, or compression. [Asset provenance](../gallery.md#asset-provenance)
+records their names and the [manifest](../../assets/manifest.json) records
+checksums.
 
 This publication contains no CSS, components, fonts, animation code, or design
-source files. Responsive behavior, accessibility, motion, and performance
-cannot be established from static portfolio images. Those would require a
-separately authorized private implementation review.
+source files. Static exports cannot establish responsive behavior, accessibility,
+motion quality, or runtime performance.

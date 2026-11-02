@@ -1,6 +1,14 @@
 # Changelog
 
-## 2026-10-05 - Portfolio-Only Current Version
+## 2026-11-02 - Showcase And Conceptual Architecture
+
+- Updated the public case-study wording to showcase terminology.
+- Documented an illustrative Next.js, Go, and PostgreSQL architecture. The
+  diagram describes a design direction, not a verified build or the official
+  website's implementation.
+- Kept the three owner-supplied images and source-publication boundary intact.
+
+## 2026-10-05 - Visual-Only Publication
 
 - Withdrew frontend, backend examples, application data, inherited assets,
   templates, styles, fonts, dependency files, tests, and build configuration.
@@ -11,10 +19,12 @@
 - Qualified reserved rights for GitHub terms, prior valid permissions, and third-party ownership.
 - Updated gallery, provenance, references, security, contributions, and verification limits.
 
-Exactly seven non-empty updates are appended to the existing 20 commits,
-bringing the retained history to 27. The owner requested no history rewrite;
-earlier source is still publicly accessible. The update is not represented as
-a confidentiality guarantee or an application deployment.
+Exactly seven non-empty updates were appended to the existing 20 commits,
+bringing the retained history to 27 at the close of that update. Later
+documentation changes added commits without rewriting those 27. The owner
+requested no history rewrite; earlier source is still publicly accessible.
+The update is not represented as a confidentiality guarantee or an
+application deployment.
 
 ## Historical Source-Bearing Versions
 
@@ -40,7 +50,7 @@ The original RoyalVilla source and owner-supplied PNG exports are unchanged.
 - Imported the public RoyalVilla frontend and curated Laravel examples.
 - Added FACT organization references and a service catalogue.
 - Documented architecture, provenance, design direction, and privacy limits.
-- Prepared the FACT portfolio narrative and owner-supplied visual gallery.
+- Prepared the FACT visual case-study narrative and owner-supplied gallery.
 
 The FACT mockups and official business context are not represented as features
 implemented by the imported property-domain source.

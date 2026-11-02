@@ -16,6 +16,8 @@
 
 /docs/**
 !/docs/README.md
+!/docs/architecture/
+!/docs/architecture/overview.md
 !/docs/gallery.md
 !/docs/provenance.md
 !/docs/roadmap.md

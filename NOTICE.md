@@ -1,6 +1,6 @@
-# Portfolio And Ownership Notice
+# Showcase And Ownership Notice
 
-Fact-Indonesia is an independent visual portfolio maintained by
+Fact-Indonesia is an independent visual showcase maintained by
 [ibamzjr](https://github.com/ibamzjr). The current version contains selected
 presentation images and documentation only, not application source or a
 deployable frontend/backend package.
@@ -10,7 +10,7 @@ deployable frontend/backend package.
 The repository owner does not authorize redistribution of the owner's FE/BE
 implementation through this showcase. Any authorized source review, licensing,
 or delivery must be arranged privately and separately in writing. Public
-portfolio access is not an offer of application source or an open-source
+showcase access is not an offer of application source or an open-source
 license.
 
 This is a publication policy, not a claim that formerly published code has
@@ -22,7 +22,7 @@ prior permissions, applicable law, and GitHub's platform terms are unaffected.
 
 [FACT Indonesia](https://fact-indonesia.com/) supplies the business context.
 Its name and official materials remain associated with their respective
-rights holders. This portfolio does not claim ownership of the official site
+rights holders. This showcase does not claim ownership of the official site
 or an endorsement by the organization.
 
 The three owner-supplied PNGs illustrate a design concept. Names, course prices,

@@ -1,9 +1,9 @@
 # All Rights Reserved
 
 Copyright (c) 2026 ibamzjr. All rights reserved in the repository owner's
-original portfolio materials.
+original showcase materials.
 
-## Portfolio Publication, Not An Open-Source License
+## Showcase Publication, Not An Open-Source License
 
 The current repository presents selected visual outcomes and case-study
 documentation for evaluation. It does not offer an open-source software

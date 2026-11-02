@@ -1,20 +1,30 @@
 # FACT Indonesia Context
 
 The [official FACT Indonesia website](https://fact-indonesia.com/) is the
-business reference for this visual case study. It describes an organization
-working in training, consultancy, personal development, and entrepreneurship.
-The reference is not evidence that this repository implements its services.
+organization reference for this showcase. It describes work in training,
+consultancy, personal development, and entrepreneurship. It is an external
+destination, not a deployment generated from this repository.
 
-## Portfolio Audience
+## Audience And Purpose
 
-The case study is intended for reviewers evaluating visual communication,
-information hierarchy, and the presentation of a learning-oriented identity.
-The concept addresses people exploring development opportunities and
-organizations comparing training or consultancy support.
+The showcase is for reviewers of the learning experience and for people
+considering how a digital course journey could present FACT Indonesia's work.
+The prototype addresses learners exploring development opportunities; the
+organization context also speaks to teams comparing training and consultancy
+support.
 
-## Reference Categories
+## Experience Scope
 
-The official homepage lists these service categories:
+The [prototype](https://www.figma.com/proto/DaUF428JV28rilJxGucJUO?node-id=0-1)
+shows a home, course discovery, course detail, account entry, and cart/voucher
+touchpoints. The three [showcase exports](../gallery.md) present selected home,
+catalogue, and recovery compositions. These references establish a design
+direction. They do not prove a production course database, live availability,
+enrollment, payment, learner progress, or certificates.
+
+## Organization References
+
+The official homepage has described these service categories:
 
 - Pre Retirement Training.
 - Pelatihan Kewirausahaan dan Pendampingan Usaha.
@@ -22,20 +32,7 @@ The official homepage lists these service categories:
 - Event Organizer.
 - Outplacement & Capacity Building.
 
-These names supply context only. Schedules, prices, availability, and service
-terms must be confirmed with FACT through its official channels. No course
-database or service catalogue implementation is published in the current tree.
-See [reference provenance](../sources.md).
-
-## Selected Visual Outcomes
-
-| Outcome | Portfolio Focus |
-| --- | --- |
-| Home concept | Institutional identity, introductory hierarchy, and clear next steps |
-| Catalogue concept | Scannable learning options and consistent content presentation |
-| Recovery concept | A considered unavailable-page state and a visible return path |
-
-These outcomes are shown in the [gallery](../gallery.md) as owner-supplied
-design mockups. They are not tested application behavior or a production
-learning platform. Enrollment, learner accounts, transactions, certificates,
-and operating metrics are outside this publication.
+These names supply context only. Schedules, prices, availability, and terms
+should be confirmed through FACT's official channels. See the
+[reference record](../sources.md) and the proposed
+[architecture direction](../architecture/overview.md).

@@ -1,23 +1,24 @@
 # Verification And Limits
 
-The relevant unit of verification is the current tracked portfolio tree.
+The relevant unit of verification is the current tracked showcase tree.
 The preceding 20 commits are intentionally preserved; this review does not
 claim to remove source from those commits.
 
 ## Publication Review
 
-The portfolio update is checked for the following properties:
+The showcase publication is reviewed for the following properties:
 
 | Check | Boundary |
 | --- | --- |
 | Tracked-file allowlist | Only approved Markdown, metadata, three PNGs, and the image manifest |
 | Withdrawn implementation | No FE/BE directories, package files, build tooling, app tests, or generated bundles in the current tree |
 | Documentation links | Relative Markdown and embedded image/link targets resolve within the approved tree |
+| Conceptual architecture | The Next.js, Go, and PostgreSQL diagram is labelled as a design direction, not a verified deployed stack |
 | Image integrity | Original byte sizes and SHA-256 values agree with the unchanged manifest |
 | Image payload review | Retained PNGs have no text/source metadata chunks or trailing payloads |
 | Staged content | No credential signatures, private implementation snippets, or current runnable-preview claims |
-| Git continuity | The original 20 commits remain ancestors; exactly seven non-empty updates are added |
-| Remote state | Public visibility and the pushed main head are checked after publication |
+| Git continuity | The original 20 commits remain ancestors; the seven visual-only update commits remain intact alongside later documentation updates |
+| Remote state | Public visibility and the pushed main head must be checked after publication |
 
 Publication validation is performed with local tools outside the public
 showcase. Application test scripts and build CI have been withdrawn rather
@@ -33,6 +34,10 @@ formatting with `git diff --check`. The
 [asset manifest](../../assets/manifest.json) supplies the image-integrity baseline.
 
 The [gallery](../gallery.md) identifies presentation claims and their limits.
+The [conceptual architecture](../architecture/overview.md) describes a possible
+Next.js, Go, and PostgreSQL system boundary; it does not verify an existing
+implementation or the official website's technology stack.
+
 The [source policy](../../SOURCE-CODE.md) states the retained-history caveat.
 
 ## Limits

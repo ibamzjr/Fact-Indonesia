@@ -1,7 +1,7 @@
 # Visual Gallery
 
 Three owner-supplied images present the FACT Indonesia design concept.
-They are static portfolio mockups, not a runnable preview or proof of the
+They are static showcase mockups, not a runnable preview or proof of the
 official site's implementation. The original image copies remain unchanged.
 
 ## Home And Institutional Identity
@@ -39,9 +39,9 @@ are unchanged PNG copies with project-specific filenames. The unrelated
 `hero.webp` in that folder is not included.
 
 The [asset manifest](../assets/manifest.json) records original filenames,
-byte sizes, and SHA-256 checksums. The portfolio-only update checked all three
-copies against this manifest. No application or build CI is included in the
-current publication.
+byte sizes, and SHA-256 checksums. The 5 October 2026 visual-only update
+checked all three copies against this manifest. No application or build CI is
+included in the current publication.
 
 ## Interpretation And Rights
 
@@ -51,6 +51,6 @@ inside a mockup are presentation content; use the
 [official website](https://fact-indonesia.com/) for current service information.
 
 FACT and other third-party names, logos, and photographed content remain
-subject to their respective rights holders. Portfolio access does not grant
+subject to their respective rights holders. Showcase access does not grant
 an additional reuse license. See [ownership notice](../NOTICE.md) and
 [repository terms](../LICENSE.md).
