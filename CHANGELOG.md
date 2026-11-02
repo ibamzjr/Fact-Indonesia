@@ -3,13 +3,14 @@
 ## 2026-11-02 - Showcase And Conceptual Architecture
 
 - Updated the public case-study wording to showcase terminology.
-- Documented an illustrative Next.js 16, Go 1.27, and PostgreSQL 18 architecture.
+- Documented an illustrative Next.js 16.4.3, Go 1.27.3, and PostgreSQL 18.6 architecture.
   The diagrams describe a design direction, not a verified build or the official
   website's implementation.
 - Reviewed both reachable Figma flows and expanded the architecture into a
-  platform map, purchase and entitlement sequence, learning path, and
-  conceptual data relationships presented in four static SVG diagrams.
+  vertical platform topology, purchase and entitlement sequence, learning
+  path, and conceptual data relationships in four GitHub-native Mermaid diagrams.
 - Split the stack badge into individual Next.js, Go, and PostgreSQL design-target badges.
+- Set the badges and diagrams to the latest stable releases verified on 2 November 2026.
 - Replaced the source badge with an All rights reserved badge linked to the repository terms.
 - Kept the three owner-supplied images and source-publication boundary intact.
 

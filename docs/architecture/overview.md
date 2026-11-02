@@ -1,125 +1,185 @@
 # FACT Indonesia - Learning Platform Architecture
 
-> **Design direction, not a deployed-system inventory.** The public repository
-> contains showcase images and documents. Next.js, Go, PostgreSQL, storage,
-> payment, and learning services below are a proposed private implementation.
+> **Private implementation direction.** These diagrams describe the intended
+> system. The public repository contains showcase images and documentation.
+> Runtime implementation and deployment records are outside this publication.
 
-A learning platform should feel simple to explore while keeping identity,
-money, course access, and achievement decisions explicit behind the interface.
-The diagrams below translate the visible prototype into a coherent system
-model without treating mockup data as production evidence.
+The architecture follows the learner from discovery through purchase to course
+access. Each diagram answers one question: where responsibilities sit, how
+payment becomes access, how learning could progress, and how records relate.
 
-## What The Prototype Actually Shows
+## Prototype Coverage
 
-The prototype review covered both named flows in the [FACT prototype](https://www.figma.com/proto/DaUF428JV28rilJxGucJUO?node-id=0-1):
-six reachable frames in Flow 1 and five in Flow 2. Both loop back to their
-start. This is the reachable prototype, not an inventory of detached Figma
-artboards or a working application.
+The [FACT prototype](https://www.figma.com/proto/DaUF428JV28rilJxGucJUO?node-id=0-1)
+was reviewed through both named flows: six reachable frames in Flow 1 and
+five in Flow 2. Both return to their start. Detached Figma artboards are
+outside this review.
 
-| Flow | Reachable frames | Architecture signal |
+| Flow | Reachable frames | System responsibility suggested |
 | --- | --- | --- |
-| 1 | Home, catalogue, course detail, sign-in, about, unavailable page | Public discovery, account entry, content and recovery states |
+| 1 | Home, catalogue, course detail, sign-in, about, recovery | Public discovery, account entry, content and recovery states |
 | 2 | Checkout, payment-selection overlay, signed-in home, catalogue variant, course-detail variant | Purchase intent, payment handoff, signed-in presentation |
 
-The catalogue shows search, filters, prices, ratings, and course cards. Course
-detail shows a media preview, category, author, description, voucher field,
-buy-now and cart actions, and related courses. Checkout shows a course summary,
-discount, total, payment choices, buyer fields, and a submit action. A Google
-sign-in option and a **Sertifikat** navigation item are visible. The prototype
-does **not** show a working lesson player, progress tracking, certificate
-issuance, content editor, or verified payment callback. The payment overlay's
-amount differs from the checkout total, so neither is a valid source of truth
-for an actual order. Provider branding in that overlay is illustrative.
+Course detail includes a preview, description, voucher field, cart action,
+buy-now action, and related courses. Checkout includes buyer fields, payment
+choices, discount, and total. Google sign-in and certificate navigation are
+visible. Lesson playback, progress, certificate issuance, and an editorial
+console remain future capabilities. The payment overlay and checkout show
+different amounts; provider selection and real transaction rules remain open.
 
 ## Technology Baseline
 
-The numeric badges identify the selected release families for this architecture:
-**Next.js 16**, **Go 1.27**, and **PostgreSQL 18**. They are design targets;
-exact private application versions require its dependency and deployment records.
-Official release references are recorded in [sources](../sources.md#technology-version-references).
+The badge versions are the latest stable releases checked on **2 November 2026**:
+**Next.js 16.4.3**, **Go 1.27.3**, and **PostgreSQL 18.6**. They are selected
+design targets; exact private application versions require dependency and
+deployment records. See the [official release references](../sources.md#technology-version-references).
 
-The four vector plates share one visual system: charcoal, ivory, restrained gold,
-fixed typography, and dedicated connector lanes. They are self-contained SVGs
-with no scripts, embedded application code, or external fonts. Open a plate
-to inspect its details at full size.
+The diagrams use the same native Mermaid presentation as RoyalVilla. A vertical
+overview establishes the main hierarchy; the following diagrams expand its
+responsibilities. GitHub supplies the native rendering and viewer theme.
 
 ## 01 / Platform Map
 
-The main design is a **modular Go application**, with one clear API boundary
-and PostgreSQL as the system of record. It does not need separate microservices
-or a search cluster merely because the product has many course cards.
+Next.js presents the experience. One modular Go application makes the business
+decisions through a defined HTTP contract, with PostgreSQL as its system of
+record. Storage and identity/payment integrations sit behind that application.
 
-[![System atlas: Next.js experience, Go business boundaries, PostgreSQL, public previews and future protected media](../../assets/architecture/system-atlas.svg)](../../assets/architecture/system-atlas.svg)
+```mermaid
+flowchart TB
+    Visitor["Visitor"]
+    Learner["Signed-in learner"]
+    Web["Next.js 16.4.3<br/>Web experience"]
+    Contract["HTTP / JSON<br/>API contract"]
+    Application["Go 1.27.3<br/>Application"]
+    Database[("PostgreSQL 18.6")]
+    Media[("Course media<br/>storage")]
+    Identity["Google sign-in<br/>Optional"]
+    Payment["Payment<br/>Provider TBD"]
 
-Solid connections show the primary design path. Dashed connections mark
-future learning capabilities. The gold access gate verifies paid state before
-granting entitlements; the lower ribbon expands that trust path.
+    Visitor --> Web
+    Learner --> Web
+    Web --> Contract
+    Contract --> Application
+    Application --> Database
+    Application --> Media
+    Application --> Identity
+    Application --> Payment
+```
 
-| Boundary | Responsibility | Data or trust rule |
+Public artwork and course previews have separate access rules from protected
+lessons. The media node groups storage for this overview; Go must authorize
+each protected-media request. Protected lesson delivery belongs to the future
+learning scope. The prototype's payment overlay does not establish a provider.
+
+### Business Responsibilities
+
+| Boundary | Responsibility | Ownership rule |
 | --- | --- | --- |
-| Next.js | Render public discovery, account entry, cart and checkout | Display server-provided prices and access; never decide either locally |
-| Go identity and catalogue | Authenticate sessions and serve bounded course discovery | Keep private account data separate from public course content |
-| Go commerce and orders | Calculate voucher quotes, create orders, reconcile payment state | Stable idempotency keys and server-calculated amounts |
-| Go entitlement | Grant course access only after authoritative payment confirmation | One order effect must not grant duplicate access |
-| Go learning and editorial | Govern lessons, progress, certificates, and publishing | Proposed; no learner or editor screens prove these workflows yet |
-| PostgreSQL | Hold courses, identities, vouchers, orders, entitlements, and later progress | Transactional source of truth; not a browser-side store |
-| Preview, private media, and payment | Separate public course artwork from protected lessons and settle purchases | Providers, hosting, and access policies remain undecided |
+| Next.js | Discovery, course detail, sign-in, cart action, checkout | Render server-provided price and access state |
+| Go identity | Sessions and account context | Keep private identity data outside public catalogue responses |
+| Go catalogue | Search, filters, course details and preview references | Serve bounded, published course content |
+| Go commerce | Quotes, voucher eligibility, orders and payment reconciliation | Calculate totals and enforce stable idempotency keys |
+| Go entitlement | Enrollment and course access | Verify paid order state before granting access |
+| Go learning | Lessons, progress, certificates and editorial tools | Future capability with separate authorization and completion policies |
+| PostgreSQL | Identity, catalogue, orders and entitlement records | Transactional source of truth |
+| Public preview storage | Artwork and course teasers | Publish only designated preview assets |
+| Protected lesson storage | Future course learning media | Serve only through authorized access |
 
 ## 02 / Purchase Becomes Access
 
-The checkout and payment overlay motivate this sequence; they do not prove
-that any payment integration exists. In particular, the browser returning
-from a payment window cannot unlock a course by itself.
+The sequence has three stages: calculate the purchase, hand off settlement,
+then verify the notification before granting access. A browser redirect cannot
+establish paid state. The payment provider remains to be selected.
 
-[![Purchase sequence: server-calculated quote, pending order, payment handoff, verified notification and atomic entitlement grant](../../assets/architecture/payment-flow.svg)](../../assets/architecture/payment-flow.svg)
+```mermaid
+sequenceDiagram
+    autonumber
+    participant Web as Next.js checkout
+    participant API as Go application
+    participant DB as PostgreSQL
+    participant Pay as Payment provider
 
-The sequence reads from top to bottom: calculate a quote, persist a pending
-order, request payment, verify the provider notification, then atomically
-record payment and access. The interface reads the authoritative state.
+    Note over Web,DB: 01 / Quote and order
+    Web->>API: Request course quote and voucher
+    API->>DB: Read published price and eligibility
+    DB-->>API: Current price and voucher rules
+    API-->>Web: Calculated total and expiry
+    Web->>API: Confirm with stable idempotency key
+    API->>DB: Persist pending order and fingerprint
 
-The design must reject a reused idempotency key with a different order body,
-handle repeated or delayed payment notifications, and retain an unknown state
-when a provider call times out. A callback must be authenticated and reconciled
-against the stored order amount before granting access. The exact gateway and
-its webhook contract are undecided.
+    Note over API,Pay: 02 / Payment handoff
+    API->>Pay: Create payment intent for stored order
+    Pay-->>API: Provider reference and checkout URL
+    API-->>Web: Pending state and payment instruction
+
+    Note over API,Pay: 03 / Verify before access
+    Pay-->>API: Payment notification
+    API->>API: Validate notification
+    API->>DB: Atomically mark paid and grant entitlement
+    Web->>API: Read authoritative order state
+    API-->>Web: Paid, pending or failed
+```
+
+A notification must match the provider signature, stored order, amount, and
+replay rules. A reused idempotency key with a different request body must fail.
+Repeated or delayed notifications must retain one business effect. A provider timeout
+requires an unknown/pending state and reconciliation; it cannot be treated as
+either a confirmed failure or a confirmed payment.
 
 ## 03 / Learning And Certificate Path
 
-This is **future platform architecture**, not a flow demonstrated by the
-prototype. The visible course preview and certificate navigation establish
-product intent only.
+This is a future product path suggested by course previews and certificate
+navigation. The server owns both the access decision and completion policy.
 
-[![Future learning path: active entitlement, authorized lesson, progress, completion policy and certificate eligibility](../../assets/architecture/learning-path.svg)](../../assets/architecture/learning-path.svg)
+```mermaid
+flowchart TB
+    Learner["Signed-in learner"]
+    Access{"Active course entitlement?"}
+    Preview["Public preview<br/>or purchase"]
+    Lesson["Authorized lesson<br/>Protected media"]
+    Progress["Persist progress"]
+    Completion{"Completion policy met?"}
+    Continue["Continue learning"]
+    Certificate["Issue certificate"]
+    Verify["Verify certificate"]
 
-Without an active entitlement, the learner returns to a public preview or
-purchase. With access, the server records progress and evaluates completion;
-unmet criteria continue learning, while met criteria may produce a certificate.
+    Learner --> Access
+    Access -->|No| Preview
+    Access -->|Yes| Lesson
+    Lesson --> Progress
+    Progress --> Completion
+    Completion -->|Not yet| Continue
+    Completion -->|Eligible| Certificate
+    Certificate --> Verify
+```
 
-The server would own progress and eligibility rules. Course playback, lesson
-completion, certificate generation, and public verification need separate
-product decisions and evidence before they can be called implemented.
+Lesson formats, completion evidence, certificate generation, revocation, and
+verification require product decisions before implementation can be certified.
 
 ## 04 / Conceptual Data Relationships
 
-This map selects the domain's principal relationships. Entity names and
-cardinalities are **proposed**; a complete schema also needs purchase provenance,
-constraints, and lifecycle records. The payment plate explains how a paid order
-grants access.
+The model groups identity, purchase, access, and learning records. These are
+proposed relationships; constraints, refunds, course versions, retention, and
+lifecycle rules still require a complete private schema design.
 
-[![Conceptual data relationships among accounts, orders, items, courses, vouchers, entitlements, lessons, progress and certificates](../../assets/architecture/data-model.svg)](../../assets/architecture/data-model.svg)
+```mermaid
+erDiagram
+    ACCOUNT ||--o{ ORDER : places
+    ORDER ||--|{ ORDER_ITEM : contains
+    COURSE ||--o{ ORDER_ITEM : purchased_as
+    VOUCHER o|--o{ ORDER : discounts
+    ORDER_ITEM ||--o| ENTITLEMENT : grants_after_payment
+    ACCOUNT ||--o{ ENTITLEMENT : holds
+    COURSE ||--o{ ENTITLEMENT : unlocks
+    COURSE ||--o{ LESSON : contains
+    ENTITLEMENT ||--o{ LESSON_PROGRESS : records
+    LESSON ||--o{ LESSON_PROGRESS : measures
+    ENTITLEMENT ||--o| CERTIFICATE : may_earn
+```
 
-| Relationship | Intended cardinality |
-| --- | --- |
-| Account to order; order to order item; course to order item | One to many |
-| Voucher on an order | Zero or one voucher |
-| Account and course to entitlement | Each can have many entitlements |
-| Course to lesson | One to many |
-| Entitlement and lesson to progress | Each can have many progress records |
-| Entitlement to certificate | Zero or one certificate |
+Each paid course item can establish one entitlement for its learner. Progress
+connects that entitlement to a lesson; certificate eligibility follows the
+entitlement and completion policy. A catalogue preview alone confers no access.
 
-The owner still needs to decide how multi-course orders, refunds, certificate
-revocation, course versioning, instructor permissions, and media retention
-work. The public showcase cannot certify those rules or any deployed database.
-
-For visual cues, read the [design notes](../design/overview.md). For what is
-actually distributed, read the [source policy](../../SOURCE-CODE.md).
+Read the [design notes](../design/overview.md) for the visual direction and the
+[source policy](../../SOURCE-CODE.md) for the publication boundary.

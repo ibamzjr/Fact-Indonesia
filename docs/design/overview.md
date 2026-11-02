@@ -38,14 +38,14 @@ illustrative rather than a source of truth for the proposed system.
 The [architecture direction](../architecture/overview.md) maps the intended
 private responsibilities behind such a journey.
 
-## Architecture Plates
+## Architecture Diagrams
 
-Four static SVG diagrams carry the same ink, warm gold, and restrained teal
-palette into the system story: platform boundaries, purchase and access,
-learning progression, and data relationships. They are explanatory drawings,
-not screenshots of deployed services or source for a running application.
-The version labels Next.js 16, Go 1.27, and PostgreSQL 18 mark chosen design
-targets; they do not establish the version of any private implementation.
+Four Mermaid diagrams live directly in the [architecture page](../architecture/overview.md):
+a vertical platform topology, followed by purchase and access, learning, and
+data relationship details. GitHub renders the diagrams from Markdown using
+its native Mermaid support; the viewer's theme sets their appearance and
+browser zoom can enlarge them. Their Next.js 16.4.3, Go 1.27.3, and PostgreSQL
+18.6 labels mark selected design targets, not verified private runtime versions.
 
 ## Showcase Exports
 

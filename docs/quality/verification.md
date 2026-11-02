@@ -10,14 +10,14 @@ The showcase publication is reviewed for the following properties:
 
 | Check | Boundary |
 | --- | --- |
-| Tracked-file allowlist | Only approved Markdown, metadata, three PNGs, four SVG diagrams, and the image manifest |
+| Tracked-file allowlist | Only approved Markdown, metadata, three PNGs, and the image manifest |
 | Withdrawn implementation | No FE/BE directories, package files, build tooling, app tests, or generated bundles in the current tree |
 | Documentation links | Relative Markdown and embedded image/link targets resolve within the approved tree |
-| Conceptual architecture | The SVG diagram set presents Next.js 16, Go 1.27, and PostgreSQL 18 as selected design targets, not a verified deployed stack |
+| Conceptual architecture | Four fenced Mermaid diagrams present Next.js 16.4.3, Go 1.27.3, and PostgreSQL 18.6 as design targets, not a verified deployed stack |
 | Prototype coverage | Two named flows and 11 reachable frames reviewed; detached Figma artboards and runtime behavior are not certified |
 | Image integrity | Original byte sizes and SHA-256 values agree with the unchanged manifest |
 | Image payload review | Retained PNGs have no text/source metadata chunks or trailing payloads |
-| Vector asset review | SVGs must remain script-free, self-contained presentation assets with no event handlers or external fetches |
+| Diagram review | GitHub-native Mermaid blocks are kept in Markdown; browser zoom can enlarge the rendered view without publishing separate diagram assets |
 | Staged content | No credential signatures, private implementation snippets, or current runnable-preview claims |
 | Git continuity | The original 20 commits remain ancestors; the seven visual-only update commits remain intact alongside later documentation updates |
 | Remote state | Public visibility and the pushed main head must be checked after publication |
@@ -36,8 +36,8 @@ formatting with `git diff --check`. The
 [asset manifest](../../assets/manifest.json) supplies the image-integrity baseline.
 
 The [gallery](../gallery.md) identifies presentation claims and their limits.
-The [conceptual architecture](../architecture/overview.md) and its four SVG
-diagrams describe possible Next.js 16, Go 1.27, and PostgreSQL 18 system
+The [conceptual architecture](../architecture/overview.md) and its four Mermaid
+diagrams describe possible Next.js 16.4.3, Go 1.27.3, and PostgreSQL 18.6 system
 boundaries; they do not verify an existing implementation or the official
 website's technology stack.
 

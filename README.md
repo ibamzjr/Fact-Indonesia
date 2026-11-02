@@ -21,9 +21,9 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/publication-visual_showcase-20232A?style=flat-square" alt="Visual showcase publication" />
-  <img src="https://img.shields.io/badge/Next.js-16-111111?style=flat-square&logo=nextdotjs&logoColor=white" alt="Next.js 16" />
-  <img src="https://img.shields.io/badge/Go-1.27-00ADD8?style=flat-square&logo=go&logoColor=white" alt="Go 1.27" />
-  <img src="https://img.shields.io/badge/PostgreSQL-18-4169E1?style=flat-square&logo=postgresql&logoColor=white" alt="PostgreSQL 18" />
+  <img src="https://img.shields.io/badge/Next.js-16.4.3-111111?style=flat-square&logo=nextdotjs&logoColor=white" alt="Next.js 16.4.3" />
+  <img src="https://img.shields.io/badge/Go-1.27.3-00ADD8?style=flat-square&logo=go&logoColor=white" alt="Go 1.27.3" />
+  <img src="https://img.shields.io/badge/PostgreSQL-18.6-4169E1?style=flat-square&logo=postgresql&logoColor=white" alt="PostgreSQL 18.6" />
   <a href="LICENSE.md"><img src="https://img.shields.io/badge/rights-all_rights_reserved-252231?style=flat-square" alt="All rights reserved" /></a>
 </p>
 
@@ -79,15 +79,34 @@ The three PNGs, including the hero above, remain unchanged. The
 [visual gallery](docs/gallery.md) explains their provenance and the
 [asset manifest](assets/manifest.json) records their sizes and SHA-256 hashes.
 
-## Architecture Direction
+## Architecture
 
-A private implementation can keep the experience, business decisions, and
-durable records in distinct layers. The diagram below is a compact entrance
-to the [full platform map, payment sequence, learning path, and data model](docs/architecture/overview.md).
-The numbered badges identify the selected [technology baseline](docs/architecture/overview.md#technology-baseline).
-The atlas is a **design blueprint** for the private implementation.
+The design places course discovery, account entry, and checkout in Next.js.
+Go owns validation, authorization, pricing, payment state, and course access;
+PostgreSQL holds the durable records. The numbered badges identify the
+[technology baseline](docs/architecture/overview.md#technology-baseline).
 
-[![FACT Indonesia system atlas: Next.js experience, Go application, PostgreSQL and media, with verified payment before access](assets/architecture/system-atlas.svg)](docs/architecture/overview.md)
+```mermaid
+flowchart TB
+    Visitor["Visitor"]
+    Learner["Signed-in learner"]
+    Web["Next.js 16.4.3<br/>Web experience"]
+    Contract["HTTP / JSON<br/>API contract"]
+    Application["Go 1.27.3<br/>Application"]
+    Database[("PostgreSQL 18.6")]
+    Media[("Course media<br/>storage")]
+    Identity["Google sign-in<br/>Optional"]
+    Payment["Payment<br/>Provider TBD"]
+
+    Visitor --> Web
+    Learner --> Web
+    Web --> Contract
+    Contract --> Application
+    Application --> Database
+    Application --> Media
+    Application --> Identity
+    Application --> Payment
+```
 
 | Layer | Intended role |
 | --- | --- |
@@ -105,7 +124,7 @@ explain the proposed boundaries and what the prototype does not show.
 
 | Included now | Not included in the current tree |
 | --- | --- |
-| Three owner-supplied PNGs, four authored SVG architecture plates, and the PNG integrity manifest | Next.js pages, Go services, PostgreSQL schema, or application tests |
+| Three owner-supplied showcase PNGs and their integrity manifest | Next.js pages, Go services, PostgreSQL schema, or application tests |
 | Product, visual, and architecture documentation | Runtime data, APIs, credentials, payment integrations, or course media |
 | Repository and ownership policies | Build tooling, deployable bundles, source maps, or a running application |
 

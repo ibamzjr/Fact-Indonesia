@@ -9,9 +9,9 @@ rights to reproduce third-party source or identity material.
 | [FACT Indonesia](https://fact-indonesia.com/) | Official organization destination and service-category context |
 | [About FACT Indonesia](https://fact-indonesia.com/profile/) | Organization profile reference |
 | [FACT experience prototype](https://www.figma.com/proto/DaUF428JV28rilJxGucJUO?node-id=0-1) | Observed home, catalogue, course detail, account, cart/voucher, and navigation direction; access may depend on Figma permissions |
-| [Next.js support policy](https://nextjs.org/support-policy) | Official status reference for the selected Next.js 16 design target |
-| [Go release history](https://go.dev/doc/devel/release) | Official release reference for the selected Go 1.27 design target |
-| [PostgreSQL versioning policy](https://www.postgresql.org/support/versioning/) | Official support reference for the selected PostgreSQL 18 design target |
+| [Next.js documentation](https://nextjs.org/docs) | Official current-version reference for the selected Next.js 16.4.3 design target |
+| [Go release history](https://go.dev/doc/devel/release) | Official release reference for the selected Go 1.27.3 design target |
+| [PostgreSQL versioning policy](https://www.postgresql.org/support/versioning/) | Official support reference for the selected PostgreSQL 18.6 design target |
 | [GitHub Terms of Service](https://docs.github.com/en/site-policy/github-terms/github-terms-of-service#d-user-generated-content) | Public-hosting and platform-rights qualification |
 | [GitHub history-removal guidance](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/removing-sensitive-data-from-a-repository) | Distinction between current-file deletion and historical removal |
 
@@ -36,11 +36,11 @@ public runtime.
 
 ## Technology Version References
 
-On 2 November 2026, the official references above listed Next.js 16 as
-Active LTS, Go 1.27 as a stable release, and PostgreSQL 18 as supported.
-The architecture plates use these major versions as **selected design
-targets**. Release availability does not establish that this repository,
-a private implementation, or the official FACT website runs those versions.
+On 2 November 2026, the official references above listed **Next.js 16.4.3**,
+**Go 1.27.3**, and **PostgreSQL 18.6** as the latest stable releases.
+The badges and diagrams use these exact versions as **selected design
+targets**. Future updates require a fresh release check. Exact private runtime
+versions require their own dependency and deployment records.
 
 The showcase does not publish current participant totals, team membership,
 schedules, fees, or course availability as maintained project data. Visitors
